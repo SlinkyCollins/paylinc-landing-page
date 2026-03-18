@@ -22,5 +22,5 @@
 </template>
 
 <script setup>
-import { Box } from 'lucide-vue-next';
+import { Box } from 'lucide-vue-next'
 </script>
