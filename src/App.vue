@@ -1,6 +1,5 @@
 <script setup>
 import Audience from './components/Audience.vue';
-import FloatingButton from './components/FloatingButton.vue';
 import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
 import Navbar from './components/Navbar.vue';
@@ -24,6 +23,5 @@ import Trust from './components/Trust.vue';
       <Signup />
     </main>
     <Footer />
-    <FloatingButton />
   </div>
 </template>
