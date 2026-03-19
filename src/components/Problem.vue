@@ -15,13 +15,18 @@
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
                         <span class="text-primary">Bank transfers are broken.</span><br />
-                        <span class="text-text-secondary">Receiving payments shouldn’t feel this stressful.</span>
+                        <span class="text-text-secondary">Receiving payments shouldn't feel this stressful.</span>
                     </h2>
                     <p class="text-[16px] text-[#42514D] leading-[1.6] max-w-150">
-                        Today’s payment experience is full of friction. Customers mistype account numbers, merchants
-                        repeat details all day, and every transfer comes with doubt.
+                        Customers mistype account numbers.
+                        Merchants repeat details all day.
+                        Every transfer comes with doubt.
 
-                        Payments should be simple. Instead, they feel like a high-stakes typing test.
+                        Stop manually typing long numbers.
+                        Stop asking customers to recite details over the phone.
+
+                        Payments should be simple.
+                        Instead, they feel like a high-stakes typing test—one mistake, and the money is gone.
                     </p>
                 </div>
             </div>
@@ -29,34 +34,67 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" ref="cardsRef">
                 <!-- Card 1 -->
                 <ReusableCard title="Costly Typos"
-                    body="One wrong digit sends money to the wrong person. Reversing a transfer is a nightmare you shouldn't have to face."
+                    body="One wrong digit sends money to the wrong person. Reversing it is slow, stressful, and sometimes impossible."
                     :size="'default'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-alert-red-bg flex items-center justify-center mb-6'"
                     :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
                     <template #icon>
-                        <TriangleAlert :size="20" class="text-alert-red-icon" />
+                        <Hash :size="20" class="text-alert-red-icon" />
                     </template>
                 </ReusableCard>
 
                 <!-- Card 2 -->
+                <ReusableCard title="Endless Repetition"
+                    body="You repeat your bank details all day. Customers still get them wrong."
+                    :size="'default'"
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'"
+                    :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
+                    <template #icon>
+                        <Repeat :size="20" class="text-alert-yellow-icon" />
+                    </template>
+                </ReusableCard>
+
+                <!-- Card 3 -->
+                <ReusableCard title="Trust Issues"
+                    body="Customers hesitate when they're not sure who they're paying."
+                    :size="'default'"
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'"
+                    :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
+                    <template #icon>
+                        <ShieldAlert :size="20" class="text-success-green-icon" />
+                    </template>
+                </ReusableCard>
+
+                <!-- Card 4 -->
                 <ReusableCard title="Identity Exposure"
                     body="Merchants share full bank details publicly all day. This exposes you to fraud and unnecessary scrutiny."
                     :size="'default'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'"
                     :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
                     <template #icon>
-                        <ShieldAlert :size="20" class="text-alert-yellow-icon" />
+                        <EyeOff :size="20" class="text-alert-yellow-icon" />
                     </template>
                 </ReusableCard>
 
-                <!-- Card 3 -->
+                <!-- Card 5 -->
                 <ReusableCard title="Verification Delays"
                     body="&quot;Send me the screenshot.&quot; Waiting for confirmation slows down your business and frustrates customers."
                     :size="'default'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-info-blue-bg flex items-center justify-center mb-6'"
                     :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
                     <template #icon>
-                        <Clock :size="20" class="text-info-blue-icon" />
+                        <Clock3 :size="20" class="text-info-blue-icon" />
+                    </template>
+                </ReusableCard>
+
+                <!-- Card 6 -->
+                <ReusableCard title="Payment confusion"
+                    body="Different apps, different formats, constant uncertainty. Payments become frustrating instead of seamless."
+                    :size="'default'"
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'"
+                    :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
+                    <template #icon>
+                        <GitCompareArrows :size="20" class="text-alert-yellow-icon" />
                     </template>
                 </ReusableCard>
             </div>
@@ -66,7 +104,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import { Clock, ShieldAlert, TriangleAlert } from 'lucide-vue-next'
+import { ShieldAlert, Hash, Repeat, EyeOff, Clock3, GitCompareArrows } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ReusableCard from './ReusableCard.vue'

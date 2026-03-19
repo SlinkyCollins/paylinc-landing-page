@@ -1,17 +1,17 @@
 <template>
     <section id="process" class="bg-primary py-10 sm:py-16 md:py-24" ref="sectionRef">
-        <div class="max-w-[1200px] mx-auto px-3 sm:px-5 md:px-8 text-center">
+        <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 text-center">
             <h3 class="text-[12px] font-medium text-light uppercase tracking-[0.08em] mb-4">
-                Simple Process
+                Simple 3-step process
             </h3>
             <h2 class="text-[32px] md:text-[36px] font-extrabold text-white mb-16 md:mb-24">
-                Your name is your account<br class="hidden md:block" /> number
+                Your name becomes your payment<br class="hidden md:block" /> identity
             </h2>
 
-            <div class="relative max-w-[900px] mx-auto">
+            <div class="relative max-w-225 mx-auto">
                 <!-- Dotted Line connecting steps -->
-                <div class="absolute top-[22px] left-[16.66%] right-[16.66%] h-[2px] hidden md:block z-0">
-                    <div ref="lineRef" class="h-full border-t-[2px] border-dashed border-light/30"
+                <div class="absolute top-5.5 left-[16.66%] right-[16.66%] h-0.5 hidden md:block z-0">
+                    <div ref="lineRef" class="h-full border-t-2 border-dashed border-light/30"
                         :style="{ width: '0%' }" />
                 </div>
 
@@ -19,36 +19,36 @@
                     <!-- Step 1 -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-[44px] h-[44px] rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
+                            class="w-11 h-11 rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
                             1
                         </div>
                         <h3 class="text-[18px] font-bold text-white mb-3">Create your identity</h3>
-                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-[260px]">
-                            Sign up and claim your unique Paylinc username (e.g., @JaneStore).
+                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
+                            Sign up and claim your unique Paylinc username (e.g. @JaneStore).
                         </p>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-[44px] h-[44px] rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
+                            class="w-11 h-11 rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
                             2
                         </div>
-                        <h3 class="text-[18px] font-bold text-white mb-3">Get your code</h3>
-                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-[260px]">
-                            Receive a permanent QR code and payment link tied to your bank account.
+                        <h3 class="text-[18px] font-bold text-white mb-3">Link your bank</h3>
+                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
+                            Add your bank account details. Payments go straight to your bank. We never hold your funds.
                         </p>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-[44px] h-[44px] rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
+                            class="w-11 h-11 rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
                             3
                         </div>
-                        <h3 class="text-[18px] font-bold text-white mb-3">Receive safely</h3>
-                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-[260px]">
-                            Customers scan or click to pay. Money goes straight to your existing bank app.
+                        <h3 class="text-[18px] font-bold text-white mb-3">Receive payments</h3>
+                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
+                            Share your username or display your QR code. Customers pay you instantly without typing bank details.
                         </p>
                     </div>
                 </div>

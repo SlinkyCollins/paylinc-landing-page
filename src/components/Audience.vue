@@ -9,7 +9,7 @@
                             Audience</span>
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold text-primary leading-[1.2]">
-                        Built for modern commerce
+                        Built for anyone who receives payments
                     </h2>
                 </div>
                 <p class="text-[16px] text-text-secondary mt-4 md:mt-0">
@@ -19,7 +19,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" ref="cardsRef">
                 <!-- Card 1 -->
-                <ReusableCard title="Merchants" body="Speed up checkout lines with instant scan-to-pay QRs."
+                <ReusableCard title="Merchants" body="Speed up checkout with instant scan-to-pay QRs."
                     :variant="'gray'" :size="'audience'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
                     :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
@@ -31,7 +31,7 @@
                 </ReusableCard>
 
                 <!-- Card 2 -->
-                <ReusableCard title="POS Operators" body="Reduce errors from manually punching in account numbers."
+                <ReusableCard title="POS Operators" body="Reduce errors from manually entering account numbers."
                     :variant="'gray'" :size="'audience'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
                     :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
@@ -43,7 +43,7 @@
                 </ReusableCard>
 
                 <!-- Card 3 -->
-                <ReusableCard title="Small Business" body="Look more professional with a branded payment identity."
+                <ReusableCard title="Small Businesses" body="Look more professional with a branded payment identity."
                     :variant="'gray'" :size="'audience'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
                     :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
@@ -55,7 +55,7 @@
                 </ReusableCard>
 
                 <!-- Card 4 -->
-                <ReusableCard title="Individuals" body="Safely receive funds from strangers or clients."
+                <ReusableCard title="Students & Individuals" body="Receive money safely from classmates, customers, or clients without sharing bank details."
                     :variant="'gray'" :size="'audience'"
                     :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
                     :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
