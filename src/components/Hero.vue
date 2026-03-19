@@ -16,7 +16,7 @@
                     </h1>
 
                     <p class="text-[16px] md:text-[18px] text-light/90 leading-[1.6] mb-10 max-w-120">
-                        Receive money securely using a verified username or QR code. Stop sharing raw bank details and
+                        Receive money safely using a verified username or QR code. Stop sharing raw bank details and
                         eliminate transfer mistakes forever.
                     </p>
                 </div>
