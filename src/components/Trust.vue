@@ -6,9 +6,7 @@
                 <div class="w-full md:w-1/2 relative" ref="imageRef">
                     <div
                         class="relative rounded-[32px] overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] aspect-[4/3] md:aspect-[3/2] w-full max-w-[500px] mx-auto md:ml-0">
-                        <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?q=80&w=1000&auto=format&fit=crop"
-                            alt="Business handshake" class="w-full h-full object-cover" loading="lazy"
-                            referrerpolicy="no-referrer" />
+                            <img :src="handshakeImg" alt="Business handshake" class="w-full h-full object-cover" loading="lazy" />
                         <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
 
                         <!-- Overlay Badge -->
@@ -67,6 +65,7 @@
 </template>
 
 <script setup>
+import handshakeImg from '@/assets/images/handshake.webp'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { CheckCircle2, TrendingUp } from 'lucide-vue-next'
 import gsap from 'gsap'

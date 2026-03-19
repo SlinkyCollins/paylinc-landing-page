@@ -2,9 +2,7 @@
   <nav class="sticky top-0 z-50 bg-white h-[72px] border-b border-gray-border/50">
     <div class="max-w-[1200px] mx-auto h-full px-3 sm:px-5 md:px-8 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
-          <Box :size="20" />
-        </div>
+        <img :src="logo" alt="Paylinc Logo" class="w-8 h-8" />
         <span class="font-heading font-bold text-[20px] text-primary">Paylinc</span>
       </div>
 
@@ -22,5 +20,5 @@
 </template>
 
 <script setup>
-import { Box } from 'lucide-vue-next'
+import logo from '@/assets/images/logo.png'
 </script>

@@ -37,10 +37,7 @@
             <!-- Right Side -->
             <div
                 class="w-full md:w-[40%] relative min-h-[400px] md:min-h-full bg-[#E3E7E5] flex items-center justify-center p-4 sm:p-6 md:p-8">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
-                    alt="Modern workspace"
-                    class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" loading="lazy"
-                    referrerpolicy="no-referrer" />
+                    <img :src="heroImg" alt="Modern workspace" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" loading="lazy"/>
                 <div class="absolute inset-0 bg-primary/10"></div>
 
                 <!-- Floating Card -->
@@ -94,6 +91,7 @@
 </template>
 
 <script setup>
+import heroImg from '@/assets/images/payment.webp'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { ArrowUpRight, CheckCircle2, QrCode } from 'lucide-vue-next'
 import gsap from 'gsap'

@@ -5,9 +5,7 @@
                 <!-- Left: Logo & Description -->
                 <div class="w-full md:w-1/3">
                     <div class="flex items-center gap-2 mb-6">
-                        <div class="w-6 h-6 bg-primary rounded-md flex items-center justify-center text-white">
-                            <Box :size="14" />
-                        </div>
+                        <img :src="logo" alt="Paylinc Logo" class="w-6 h-6" />
                         <span class="font-heading font-bold text-[18px] text-primary">Paylinc</span>
                     </div>
                     <p class="text-[14px] text-text-secondary leading-[1.6] max-w-[280px]">
@@ -53,7 +51,7 @@
             <div
                 class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-border/50 gap-4">
                 <p class="text-[12px] text-text-secondary">
-                    © 2023 Paylinc Technologies. All rights reserved.
+                    © {{ new Date().getFullYear() }} Paylinc Technologies. All rights reserved.
                 </p>
 
                 <div class="flex items-center gap-4">
@@ -73,5 +71,6 @@
 </template>
 
 <script setup>
+import logo from '@/assets/images/logo.png'
 import { Box, Instagram, Linkedin, Twitter } from 'lucide-vue-next'
 </script>
