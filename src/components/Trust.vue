@@ -35,13 +35,11 @@
 
                     <h2 class="text-[28px] md:text-[36px] font-bold text-primary leading-[1.2] mb-6">
                         Not a wallet.<br />
-                        Just a safer way to identify.
+                        Just a safer way to get paid.
                     </h2>
 
                     <p class="text-[16px] text-[#42514D] leading-[1.6] mb-8 max-w-120">
-                        Paylinc does not hold your money. We act as a secure identity layer that sits on top of your
-                        existing
-                        bank. You keep using the apps you love, but with the added safety of verified identities.
+                        Paylinc doesn't hold your money. It acts as a secure identity layer on top of your existing bank. You keep using the apps you trust, but with the added safety of verified identities.
                     </p>
 
                     <ul class="space-y-4">
