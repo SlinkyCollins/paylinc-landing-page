@@ -1,12 +1,12 @@
 <template>
-    <section class="pt-8 pb-12 md:pt-12 md:pb-24 px-3 sm:px-5 md:px-8 max-w-[1200px] mx-auto" ref="containerRef">
+    <section class="pt-8 pb-12 md:pt-12 md:pb-24 px-3 sm:px-5 md:px-8 max-w-300 mx-auto" ref="containerRef">
         <div
-            class="flex flex-col md:flex-row rounded-[32px] overflow-hidden shadow-[0_8px_32px_rgba(26,60,56,0.08)] min-h-[560px]">
+            class="flex flex-col md:flex-row rounded-4xl overflow-hidden shadow-[0_8px_32px_rgba(26,60,56,0.08)] min-h-140">
             <!-- Left Side -->
             <div class="w-full md:w-[60%] bg-primary p-8 md:p-16 flex flex-col justify-center relative z-10">
                 <div ref="textRef">
                     <div
-                        class="inline-flex items-center h-[20px] px-[16px] bg-light text-primary text-[12px] font-medium rounded-full mb-6">
+                        class="inline-flex items-center h-5 px-4 bg-light text-primary text-[12px] font-medium rounded-full mb-6">
                         <span class="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
                         Safer Payments for Everyone
                     </div>
@@ -15,7 +15,7 @@
                         One identity for<br /><span class="text-alert-yellow-icon">all</span> your<br />payments
                     </h1>
 
-                    <p class="text-[16px] md:text-[18px] text-light/90 leading-[1.6] mb-10 max-w-[480px]">
+                    <p class="text-[16px] md:text-[18px] text-light/90 leading-[1.6] mb-10 max-w-120">
                         Receive money securely using a verified username or QR code. Stop sharing raw bank details and
                         eliminate transfer mistakes forever.
                     </p>
@@ -23,12 +23,12 @@
 
                 <div ref="buttonsRef" class="flex flex-wrap items-center gap-4">
                     <button
-                        class="bg-white text-primary font-bold text-[16px] h-[44px] px-[28px] rounded-full shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.04] flex items-center gap-2">
+                        class="bg-white text-primary font-bold text-[16px] h-11 px-7 rounded-full shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.04] flex items-center gap-2">
                         Join Early Access
                         <ArrowUpRight :size="18" />
                     </button>
                     <button
-                        class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-[44px] px-[28px] rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04]">
+                        class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04]">
                         See How It Works
                     </button>
                 </div>
@@ -36,13 +36,13 @@
 
             <!-- Right Side -->
             <div
-                class="w-full md:w-[40%] relative min-h-[400px] md:min-h-full bg-[#E3E7E5] flex items-center justify-center p-4 sm:p-6 md:p-8">
+                class="w-full md:w-[40%] relative min-h-100 md:min-h-full bg-gray-border flex items-center justify-center p-4 sm:p-6 md:p-8">
                     <img :src="heroImg" alt="Modern workspace" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" loading="lazy"/>
                 <div class="absolute inset-0 bg-primary/10"></div>
 
                 <!-- Floating Card -->
                 <div ref="cardRef"
-                    class="relative z-10 w-full max-w-[320px] bg-white rounded-[24px] shadow-[0_12px_40px_rgba(26,60,56,0.12)] p-6">
+                    class="relative z-10 w-full max-w-[320px] bg-white rounded-3xl shadow-[0_12px_40px_rgba(26,60,56,0.12)] p-6">
                     <div class="flex items-center justify-between mb-8">
                         <div class="flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
@@ -53,15 +53,15 @@
                                 <p class="text-[14px] text-text-secondary">@david_m_store</p>
                             </div>
                         </div>
-                        <div class="w-6 h-6 rounded-full bg-[#3A8DDE] text-white flex items-center justify-center">
+                        <div class="w-6 h-6 rounded-full bg-info-blue-icon text-white flex items-center justify-center">
                             <CheckCircle2 :size="14" :stroke-width="3" />
                         </div>
                     </div>
 
                     <div
-                        class="relative group bg-light-gray rounded-[16px] p-6 flex justify-center mb-6 border border-gray-border/50 cursor-pointer hover:bg-light transition-colors duration-300">
+                        class="relative group bg-light-gray rounded-2xl p-6 flex justify-center mb-6 border border-gray-border/50 cursor-pointer hover:bg-light transition-colors duration-300">
                         <div
-                            class="absolute inset-0 rounded-[16px] border-2 border-transparent group-hover:border-accent/30 transition-colors duration-300">
+                            class="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-accent/30 transition-colors duration-300">
                         </div>
                         <div class="relative z-10 animate-[pulse_3s_ease-in-out_infinite] group-hover:animate-none">
                             <QrCode :size="80"

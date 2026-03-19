@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-white border-t border-gray-border pt-16 pb-8">
-        <div class="max-w-[1200px] mx-auto px-3 sm:px-5 md:px-8">
+        <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
             <div class="flex flex-col md:flex-row justify-between gap-12 mb-16">
                 <!-- Left: Logo & Description -->
                 <div class="w-full md:w-1/3">
@@ -8,7 +8,7 @@
                         <img :src="logo" alt="Paylinc Logo" class="w-6 h-6" />
                         <span class="font-heading font-bold text-[18px] text-primary">Paylinc</span>
                     </div>
-                    <p class="text-[14px] text-text-secondary leading-[1.6] max-w-[280px]">
+                    <p class="text-[14px] text-text-secondary leading-[1.6] max-w-70">
                         The secure identity layer for modern payments. We do not process funds; we make receiving them
                         safer.
                     </p>

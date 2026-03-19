@@ -1,17 +1,17 @@
 <template>
     <section class="bg-white py-10 sm:py-16 md:py-24" ref="sectionRef">
-        <div class="max-w-[1200px] mx-auto px-3 sm:px-5 md:px-8">
+        <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
                 <!-- Left: Image -->
                 <div class="w-full md:w-1/2 relative" ref="imageRef">
                     <div
-                        class="relative rounded-[32px] overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] aspect-[4/3] md:aspect-[3/2] w-full max-w-[500px] mx-auto md:ml-0">
+                        class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0">
                             <img :src="handshakeImg" alt="Business handshake" class="w-full h-full object-cover" loading="lazy" />
                         <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
 
                         <!-- Overlay Badge -->
                         <div
-                            class="absolute bottom-6 right-6 bg-white rounded-[16px] p-4 shadow-lg flex flex-col gap-1 min-w-[140px]">
+                            class="absolute bottom-6 right-6 bg-white rounded-2xl p-4 shadow-lg flex flex-col gap-1 min-w-35">
                             <span class="text-[12px] text-text-secondary font-medium">Transfer Accuracy</span>
                             <div class="flex items-center gap-2">
                                 <span class="text-[24px] font-bold text-primary">100%</span>
@@ -38,7 +38,7 @@
                         Just a safer way to identify.
                     </h2>
 
-                    <p class="text-[16px] text-[#42514D] leading-[1.6] mb-8 max-w-[480px]">
+                    <p class="text-[16px] text-[#42514D] leading-[1.6] mb-8 max-w-120">
                         Paylinc does not hold your money. We act as a secure identity layer that sits on top of your
                         existing
                         bank. You keep using the apps you love, but with the added safety of verified identities.
