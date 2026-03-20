@@ -3,7 +3,7 @@
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 flex justify-center">
             <div ref="cardRef"
                 class="w-full max-w-150 bg-primary rounded-4xl p-8 md:p-12 shadow-[0_24px_64px_rgba(26,60,56,0.16)] flex flex-col items-center text-center">
-                <h2 class="text-[28px] md:text-[32px] font-extrabold text-white mb-3">
+                <h2 class="text-[28px] md:text-[32px] font-extrabold text-white mb-3 leading-tight">
                     Be among the first to try Paylinc
                 </h2>
                 <p class="text-[16px] text-light/90 mb-8 max-w-100">
@@ -18,7 +18,7 @@
                             <select
                                 class="w-full h-11 px-4 rounded-lg bg-accent border border-accent text-white focus:outline-none focus:border-white/30 transition-colors text-[16px] appearance-none cursor-pointer"
                                 value="">
-                                <option value="" disabled class="text-white/60">I am a...</option>
+                                <option value="" disabled selected class="text-white/60">I am a...</option>
                                 <option value="merchant" class="text-white">Merchant</option>
                                 <option value="pos_operator" class="text-white">POS Operator</option>
                                 <option value="small_business" class="text-white">Small Business</option>
