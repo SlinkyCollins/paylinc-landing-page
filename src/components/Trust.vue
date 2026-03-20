@@ -6,7 +6,8 @@
                 <div class="w-full md:w-1/2 relative" ref="imageRef">
                     <div
                         class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0">
-                            <img :src="handshakeImg" alt="Business handshake" class="w-full h-full object-cover" loading="lazy" />
+                        <img :src="handshakeImg" alt="Business handshake" class="w-full h-full object-cover"
+                            loading="lazy" />
                         <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
 
                         <!-- Overlay Badge -->
@@ -39,21 +40,29 @@
                     </h2>
 
                     <p class="text-[16px] text-[#42514D] leading-[1.6] mb-8 max-w-120">
-                        Paylinc doesn't hold your money. It acts as a secure identity layer on top of your existing bank. You keep using the apps you trust, but with the added safety of verified identities.
+                        Paylinc doesn't hold your money. It acts as a secure identity layer on top of your existing
+                        bank. You keep using the apps you trust—just with safer, verified payments.
                     </p>
 
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <CheckCircle2 :size="20" class="text-accent shrink-0 mt-0.5" />
-                            <span class="text-[16px] text-primary font-medium">Money goes directly to your bank</span>
+                            <span className="text-[16px] text-text-secondary leading-[1.6]"><strong
+                                    className="text-primary font-bold">Money goes straight to your bank: </strong> No intermediaries. No holding funds. </span>
                         </li>
                         <li class="flex items-start gap-3">
                             <CheckCircle2 :size="20" class="text-accent shrink-0 mt-0.5" />
-                            <span class="text-[16px] text-primary font-medium">Verified Payment Identity</span>
+                            <span className="text-[16px] text-text-secondary leading-[1.6]"><strong
+                                    className="text-primary font-bold">Verified payment identity:</strong> Customers know exactly who they're paying—no confusion. </span>
                         </li>
                         <li class="flex items-start gap-3">
                             <CheckCircle2 :size="20" class="text-accent shrink-0 mt-0.5" />
-                            <span class="text-[16px] text-primary font-medium">Works with all major fintech apps</span>
+                            <span className="text-[16px] text-text-secondary leading-[1.6]"><strong
+                                    className="text-primary font-bold">No more typing errors:</strong> QR codes and usernames remove the risk of wrong account numbers completely.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle2 :size="20" class="text-accent shrink-0 mt-0.5" />
+                            <span className="text-[16px] text-text-secondary leading-[1.6]"><strong className="text-primary font-bold">Keep your details private:</strong> No need to share your bank account every time. </span>
                         </li>
                     </ul>
                 </div>

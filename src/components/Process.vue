@@ -48,7 +48,8 @@
                         </div>
                         <h3 class="text-[18px] font-bold text-white mb-3">Receive payments</h3>
                         <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
-                            Share your username or display your QR code. Customers pay you instantly without typing bank details.
+                            Share your username or display your QR code. Customers pay you instantly without typing bank
+                            details.
                         </p>
                     </div>
                 </div>

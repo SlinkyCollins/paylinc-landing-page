@@ -22,12 +22,12 @@
 
                 <div ref="buttonsRef" class="flex flex-wrap items-center gap-4">
                     <button
-                        class="bg-white text-primary font-bold text-[16px] h-11 px-7 rounded-full shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.04] flex items-center gap-2">
+                        class="bg-white text-primary font-bold text-[16px] h-11 px-7 rounded-full shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.04] flex items-center gap-2 cursor-pointer">
                         Join Early Access
                         <ArrowUpRight :size="18" />
                     </button>
                     <button
-                        class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04]">
+                        class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04] cursor-pointer">
                         See How It Works
                     </button>
                 </div>
