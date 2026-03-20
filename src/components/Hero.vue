@@ -16,27 +16,33 @@
                     </h1>
 
                     <p class="text-[16px] md:text-[18px] text-light/90 leading-[1.6] mb-10 max-w-120">
-                        Receive money safely with a verified username or QR code. No more sharing bank details or dealing with transfer mistakes.
+                        Receive money safely with a verified username or QR code. No more sharing bank details or
+                        dealing with transfer mistakes.
                     </p>
                 </div>
 
                 <div ref="buttonsRef" class="flex flex-wrap items-center gap-4">
-                    <button
-                        class="bg-white text-primary font-bold text-[16px] h-11 px-7 rounded-full shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.04] flex items-center gap-2 cursor-pointer">
-                        Join Early Access
-                        <ArrowUpRight :size="18" />
-                    </button>
-                    <button
-                        class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04] cursor-pointer">
-                        See How It Works
-                    </button>
+                    <a href="#signup">
+                        <button
+                            class="bg-white text-primary font-bold text-[16px] h-11 px-7 rounded-full shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.04] flex items-center gap-2 cursor-pointer">
+                            Join Early Access
+                            <ArrowUpRight :size="18" />
+                        </button>
+                    </a>
+                    <a href="#process">
+                        <button
+                            class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04] cursor-pointer">
+                            See How It Works
+                        </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Right Side -->
             <div
                 class="w-full md:w-[40%] relative min-h-100 md:min-h-full bg-gray-border flex items-center justify-center p-4 sm:p-6 md:p-8">
-                    <img :src="heroImg" alt="Modern workspace" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" loading="lazy"/>
+                <img :src="heroImg" alt="Modern workspace"
+                    class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" loading="lazy" />
                 <div class="absolute inset-0 bg-primary/10"></div>
 
                 <!-- Floating Card -->

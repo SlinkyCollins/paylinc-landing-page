@@ -12,9 +12,11 @@
         <a href="#audience" class="font-medium text-[16px] text-[#42514D] hover:text-primary hover:underline underline-offset-4 transition-colors">Who it's For</a>
       </div>
 
-      <button class="btn-primary h-10 px-6">
+      <a href="#signup">
+        <button class="btn-primary h-10 px-6">
         Join Early Access
       </button>
+      </a>
     </div>
   </nav>
 </template>

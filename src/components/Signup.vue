@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-light-gray py-10 sm:py-16 md:py-24" ref="sectionRef">
+    <section id="signup" class="bg-light-gray py-10 sm:py-16 md:py-24" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 flex justify-center">
             <div ref="cardRef"
                 class="w-full max-w-150 bg-primary rounded-4xl p-8 md:p-12 shadow-[0_24px_64px_rgba(26,60,56,0.16)] flex flex-col items-center text-center">
