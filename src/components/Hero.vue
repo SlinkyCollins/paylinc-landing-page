@@ -52,7 +52,7 @@
                         <div class="flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
                                 alt="David Miller" class="w-12 h-12 rounded-full object-cover border-2 border-light"
-                                referrerpolicy="no-referrer" />
+                                referrerpolicy="no-referrer" loading="lazy" />
                             <div>
                                 <h3 class="font-bold text-[16px] text-primary leading-tight">David Miller</h3>
                                 <p class="text-[14px] text-text-secondary">@david_m_store</p>
