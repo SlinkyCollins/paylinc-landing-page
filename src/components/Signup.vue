@@ -13,14 +13,8 @@
 
                 <form ref="formRef" class="w-full flex flex-col gap-4 mb-6" @submit.prevent="handleSubmit">
                     <div class="flex flex-col md:flex-row gap-4">
-                        <input 
-                            v-model.trim="form.name" 
-                            type="text" 
-                            name="name" 
-                            placeholder="Full Name" 
-                            required
-                            class="w-full md:w-1/2 h-11 px-4 rounded-lg bg-accent border border-accent text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 transition-colors text-[16px]" 
-                        />
+                        <input v-model.trim="form.name" type="text" name="name" placeholder="Full Name" required
+                            class="w-full md:w-1/2 h-11 px-4 rounded-lg bg-accent border border-accent text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 transition-colors text-[16px]" />
 
                         <div class="relative w-full md:w-1/2">
                             <select v-model="form.userType" name="user_type" required
@@ -123,7 +117,7 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { Lock } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -186,6 +180,15 @@ function hideToast() {
     toast.value.show = false
     if (toastTimeout) clearTimeout(toastTimeout)
 }
+
+watch(
+    [() => form.value.name, () => form.value.email, () => form.value.userType],
+    () => {
+        if (errorMessage.value) {
+            errorMessage.value = ''
+        }
+    }
+)
 
 async function handleSubmit() {
     errorMessage.value = ''
