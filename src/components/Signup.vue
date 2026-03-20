@@ -228,7 +228,7 @@ async function handleSubmit() {
         const data = await response.json()
 
         if (response.ok) {
-            showToast('Nice. You\'re on the early access list.')
+            showToast('You\'re in. We\'ll notify you as soon as Paylinc is live.')
             form.value.name = ''
             form.value.email = ''
             form.value.userType = ''
