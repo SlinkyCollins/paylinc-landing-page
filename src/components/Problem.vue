@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { ShieldAlert, Hash, Repeat, EyeOff, Clock3, GitCompareArrows, ChevronDown, ChevronUp } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -115,28 +115,93 @@ const visibleCards = computed(() => {
     return isExpanded.value ? cards : cards.slice(0, 3)
 })
 
-const toggleCards = () => {
+const getCardsContainer = () => cardsRef.value?.$el || cardsRef.value
+
+const toggleCards = async () => {
+    const container = getCardsContainer()
+
+    if (!container) {
+        isExpanded.value = !isExpanded.value
+        return
+    }
+
+    const startHeight = container.getBoundingClientRect().height
     isExpanded.value = !isExpanded.value
+
+    await nextTick()
+
+    const endHeight = container.getBoundingClientRect().height
+
+    if (startHeight === endHeight) {
+        return
+    }
+
+    gsap.set(container, { height: startHeight, overflow: 'hidden' })
+    gsap.to(container, {
+        height: endHeight,
+        duration: 0.35,
+        ease: 'power2.inOut',
+        onComplete: () => {
+            gsap.set(container, { clearProps: 'height,overflow' })
+        }
+    })
 }
 
 let ctx
 
 onMounted(() => {
     ctx = gsap.context(() => {
-        gsap.fromTo(
-            cardsRef.value?.children || [],
-            { opacity: 0, y: 40 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: sectionRef.value,
-                    start: 'top 70%'
-                }
+        const getCardElements = () => {
+            const container = getCardsContainer()
+            return container?.children ? Array.from(container.children) : []
+        }
+
+        const animateCards = (targets) => {
+            if (!targets.length) {
+                return
             }
+
+            gsap.fromTo(
+                targets,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    stagger: 0.2,
+                    ease: 'power3.out',
+                    overwrite: 'auto',
+                    onComplete: () => {
+                        targets.forEach((cardEl) => {
+                            cardEl.dataset.animated = 'true'
+                        })
+                    }
+                }
+            )
+        }
+
+        ScrollTrigger.create({
+            trigger: sectionRef.value,
+            start: 'top 70%',
+            once: true,
+            onEnter: () => {
+                const initialCards = getCardElements().filter((cardEl) => cardEl.dataset.animated !== 'true')
+                animateCards(initialCards)
+            }
+        })
+
+        watch(
+            isExpanded,
+            async (expanded) => {
+                if (!expanded) {
+                    return
+                }
+
+                await nextTick()
+                const newCards = getCardElements().filter((cardEl) => cardEl.dataset.animated !== 'true')
+                animateCards(newCards)
+            },
+            { flush: 'post' }
         )
     }, sectionRef.value)
 })
@@ -149,12 +214,25 @@ onUnmounted(() => {
 <style scoped>
 .card-expand-enter-active,
 .card-expand-leave-active {
-    transition: all 0.3s ease;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.card-expand-leave-active {
+    pointer-events: none;
+}
+
+.card-expand-move {
+    transition: transform 0.35s ease;
 }
 
 .card-expand-enter-from,
 .card-expand-leave-to {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(-12px);
+}
+
+.card-expand-leave-from {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
