@@ -1,5 +1,6 @@
 <script setup>
 import Audience from './components/Audience.vue';
+import BackToTop from './components/BackToTop.vue';
 import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
 import Navbar from './components/Navbar.vue';
@@ -23,5 +24,6 @@ import Trust from './components/Trust.vue';
       <Signup />
     </main>
     <Footer />
+    <BackToTop />
   </div>
 </template>
