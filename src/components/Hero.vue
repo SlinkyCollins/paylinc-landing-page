@@ -52,8 +52,7 @@
                     class="relative z-10 w-full max-w-[320px] bg-white dark:bg-dark-elevated rounded-3xl shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] p-5 sm:p-6 mx-auto flex flex-col transition-colors duration-300 border border-transparent dark:border-dark-border">
                     <div class="flex items-center justify-between mb-6 sm:mb-8">
                         <div class="flex items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
-                                alt="David Miller"
+                            <img :src="avatar" alt="David Miller"
                                 class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-light dark:border-dark-border"
                                 referrerpolicy="no-referrer" loading="lazy" />
                             <div>
@@ -106,6 +105,7 @@
 
 <script setup>
 import heroImg from '@/assets/images/payment.webp'
+import avatar from '@/assets/images/avatar.jpg'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { ArrowUpRight, CheckCircle2, QrCode } from 'lucide-vue-next'
 import gsap from 'gsap'

@@ -4,7 +4,7 @@
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
     ]">
         <button @click="scrollToTop"
-            class="bg-primary text-white h-11 w-11 rounded-full shadow-sm hover:bg-accent transition-all duration-200 ease-out hover:scale-[1.04] hover:shadow-md flex items-center justify-center cursor-pointer"
+            class="bg-primary dark:bg-white text-white dark:text-primary h-11 w-11 rounded-full shadow-sm hover:bg-accent dark:hover:bg-gray-200 transition-all duration-200 ease-out hover:scale-[1.04] hover:shadow-md flex items-center justify-center cursor-pointer"
             aria-label="Back to top">
             <ArrowUp :size="20" />
         </button>

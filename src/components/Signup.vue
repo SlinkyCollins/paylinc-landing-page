@@ -1,32 +1,32 @@
 <template>
-    <section id="signup" class="bg-light-gray py-10 sm:py-16 md:py-24" ref="sectionRef">
+    <section id="signup" class="bg-light-gray dark:bg-dark-surface py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 flex justify-center">
             <div ref="cardRef"
-                class="w-full max-w-150 bg-primary rounded-4xl p-8 md:p-12 shadow-[0_24px_64px_rgba(26,60,56,0.16)] flex flex-col items-center text-center">
-                <h2 class="text-[28px] md:text-[32px] font-extrabold text-white mb-3 leading-tight">
+                class="w-full max-w-150 bg-primary dark:bg-dark-base rounded-4xl p-8 md:p-12 shadow-[0_24px_64px_rgba(26,60,56,0.16)] dark:shadow-[0_24px_64px_rgba(0,0,0,0.6)] flex flex-col items-center text-center transition-colors duration-300 border border-transparent dark:border-dark-border">
+                <h2 class="text-[28px] md:text-[32px] font-extrabold text-white dark:text-dark-text mb-3 leading-tight">
                     Be among the first to try Paylinc
                 </h2>
 
-                <p class="text-[16px] text-light/90 mb-8 max-w-100">
+                <p class="text-[16px] text-light/90 dark:text-dark-muted mb-8 max-w-100">
                     Get early access, secure your username, and stay updated as we launch.
                 </p>
 
                 <form ref="formRef" class="w-full flex flex-col gap-4 mb-6" @submit.prevent="handleSubmit">
                     <div class="flex flex-col md:flex-row gap-4">
                         <input v-model.trim="form.name" type="text" name="name" placeholder="Full Name" required
-                            class="w-full md:w-1/2 h-11 px-4 rounded-lg bg-accent border border-accent text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 transition-colors text-[16px]" />
+                            class="w-full md:w-1/2 h-11 px-4 rounded-lg bg-accent dark:bg-dark-elevated border border-accent dark:border-dark-border text-white dark:text-dark-text placeholder:text-white/60 dark:placeholder:text-dark-muted focus:outline-none focus:border-white/30 dark:focus:border-accent transition-colors text-[16px]" />
 
                         <div class="relative w-full md:w-1/2">
                             <select v-model="form.userType" name="user_type" required
-                                class="w-full h-11 px-4 rounded-lg bg-accent border border-accent text-white focus:outline-none focus:border-white/30 transition-colors text-[16px] appearance-none cursor-pointer">
-                                <option disabled value="">I am a...</option>
-                                <option value="merchant">Merchant</option>
-                                <option value="pos_operator">POS Operator</option>
-                                <option value="small_business">Small Business</option>
-                                <option value="individual">Individual</option>
+                                class="w-full h-11 px-4 rounded-lg bg-accent dark:bg-dark-elevated border border-accent dark:border-dark-border text-white dark:text-dark-text focus:outline-none focus:border-white/30 dark:focus:border-accent transition-colors text-[16px] appearance-none cursor-pointer">
+                                <option disabled value="" class="text-white/60 dark:text-dark-muted">I am a...</option>
+                                <option value="merchant" class="text-white dark:text-dark-text">Merchant</option>
+                                <option value="pos_operator" class="text-white dark:text-dark-text">POS Operator</option>
+                                <option value="small_business" class="text-white dark:text-dark-text">Small Business</option>
+                                <option value="individual" class="text-white dark:text-dark-text">Individual</option>
                             </select>
 
-                            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60">
+                            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60 dark:text-dark-muted">
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2"
@@ -37,10 +37,10 @@
                     </div>
 
                     <input v-model.trim="form.email" type="email" name="email" placeholder="Email Address" required
-                        class="w-full h-11 px-4 rounded-lg bg-accent border border-accent text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 transition-colors text-[16px]" />
+                        class="w-full h-11 px-4 rounded-lg bg-accent dark:bg-dark-elevated border border-accent dark:border-dark-border text-white dark:text-dark-text placeholder:text-white/60 dark:placeholder:text-dark-muted focus:outline-none focus:border-white/30 dark:focus:border-accent transition-colors text-[16px]" />
 
                     <button type="submit" :disabled="isSubmitting"
-                        class="w-full h-12 bg-white text-primary font-bold text-[16px] rounded-lg shadow-sm hover:bg-light transition-all duration-200 ease-out hover:scale-[1.02] mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100">
+                        class="w-full h-12 bg-white dark:bg-accent text-primary dark:text-white font-bold text-[16px] rounded-lg shadow-sm hover:bg-light dark:hover:bg-accent/90 transition-all duration-200 ease-out hover:scale-[1.02] mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100">
                         <span class="flex items-center justify-center gap-2">
                             <svg v-if="isSubmitting" class="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"
                                 aria-hidden="true">
@@ -66,8 +66,8 @@
                         class="w-full mb-4 rounded-2xl border border-red-300/30 bg-red-100/10 px-4 py-3 text-left backdrop-blur-sm">
                         <div class="flex items-start gap-3">
                             <div
-                                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-200/20 text-red-100 text-sm font-bold">
-                                !
+                                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-red-100 text-sm font-bold">
+                                <Info />
                             </div>
 
                             <div class="min-w-0">
@@ -80,7 +80,7 @@
                     </div>
                 </transition>
 
-                <div class="flex items-center justify-center gap-2 text-[12px] text-light/60">
+                <div class="flex items-center justify-center gap-2 text-[12px] text-light/60 dark:text-dark-muted">
                     <Lock :size="12" />
                     <span>We'll only send you important updates. No spam.</span>
                 </div>
@@ -118,7 +118,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref, watch } from 'vue'
-import { Lock } from 'lucide-vue-next'
+import { Info, Lock } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
