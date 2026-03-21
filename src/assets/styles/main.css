@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
@@ -20,6 +22,14 @@
   --color-alert-yellow-icon: #E3B23C;
   --color-info-blue-bg: #E7F1FB;
   --color-info-blue-icon: #3A8DDE;
+
+  /* Dark mode semantic tokens based on primary hue (169) */
+  --color-dark-base: #081210;
+  --color-dark-surface: #0E201C;
+  --color-dark-elevated: #142E28;
+  --color-dark-border: #1F473E;
+  --color-dark-text: #EEF2F1;
+  --color-dark-muted: #A3B8B4;
 
   --text-display: clamp(2.75rem, 2.25rem + 2vw, 4.5rem);
   --text-display--line-height: 0.95;
@@ -77,12 +87,11 @@
 
   body {
     font-family: var(--font-sans);
-    color: var(--color-text-primary);
-    background-color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     font-size: var(--text-body);
     line-height: var(--text-body--line-height);
     font-weight: 400;
+    @apply bg-white text-text-primary dark:bg-dark-base dark:text-dark-text transition-colors duration-300;
   }
 
   :where(p, li, a, span, small, label, button, input, textarea, select) {

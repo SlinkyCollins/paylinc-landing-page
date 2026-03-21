@@ -14,7 +14,7 @@ import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 <template>
   <SpeedInsights />
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen bg-white dark:bg-dark-base transition-colors duration-300">
     <Navbar />
     <main>
       <Hero />

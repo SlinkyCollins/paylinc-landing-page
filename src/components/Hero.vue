@@ -3,7 +3,8 @@
         <div
             class="flex flex-col md:flex-row rounded-4xl overflow-hidden shadow-[0_8px_32px_rgba(26,60,56,0.08)] min-h-140">
             <!-- Left Side -->
-            <div class="w-full md:w-[60%] bg-primary p-8 md:p-16 flex flex-col justify-center relative z-10">
+            <div
+                class="w-full md:w-[60%] bg-primary dark:bg-linear-to-br dark:from-primary dark:to-[#0F2623] p-8 md:p-16 flex flex-col justify-center relative z-10 transition-colors duration-300">
                 <div ref="textRef">
                     <div
                         class="inline-flex items-center h-5 px-4 bg-light text-primary text-[12px] font-medium rounded-full mb-6">
@@ -40,53 +41,61 @@
 
             <!-- Right Side -->
             <div
-                class="w-full md:w-[40%] relative min-h-100 md:min-h-full bg-gray-border flex items-center justify-center p-4 sm:p-6 md:p-8">
+                class="w-full md:w-[40%] relative min-h-100 bg-gray-border dark:bg-dark-surface flex items-center justify-center p-6 sm:p-8 md:p-10 overflow-hidden transition-colors duration-300">
                 <img :src="heroImg" alt="Modern workspace"
-                    class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" loading="lazy" />
+                    class="absolute inset-0 w-full h-full object-cover dark:opacity-80 transition-opacity duration-300"
+                    loading="lazy" />
                 <div class="absolute inset-0 bg-primary/10"></div>
 
                 <!-- Floating Card -->
                 <div ref="cardRef"
-                    class="relative z-10 w-full max-w-[320px] bg-white rounded-3xl shadow-[0_12px_40px_rgba(26,60,56,0.12)] p-6">
-                    <div class="flex items-center justify-between mb-8">
+                    class="relative z-10 w-full max-w-[320px] bg-white dark:bg-dark-elevated rounded-3xl shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] p-5 sm:p-6 mx-auto flex flex-col transition-colors duration-300 border border-transparent dark:border-dark-border">
+                    <div class="flex items-center justify-between mb-6 sm:mb-8">
                         <div class="flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
-                                alt="David Miller" class="w-12 h-12 rounded-full object-cover border-2 border-light"
+                                alt="David Miller"
+                                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-light dark:border-dark-border"
                                 referrerpolicy="no-referrer" loading="lazy" />
                             <div>
-                                <h3 class="font-bold text-[16px] text-primary leading-tight">David Miller</h3>
-                                <p class="text-[14px] text-text-secondary">@david_m_store</p>
+                                <h3
+                                    class="font-bold text-[14px] sm:text-[16px] text-primary dark:text-dark-text leading-tight">
+                                    David Miller</h3>
+                                <p class="text-[12px] sm:text-[14px] text-text-secondary dark:text-dark-muted">
+                                    @david_m_store</p>
                             </div>
                         </div>
-                        <div class="w-6 h-6 rounded-full bg-info-blue-icon text-white flex items-center justify-center">
-                            <CheckCircle2 :size="14" :stroke-width="3" />
+                        <div
+                            class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-info-blue-icon text-white flex items-center justify-center shrink-0">
+                            <CheckCircle2 :size="12" class="sm:w-3.5 sm:h-3.5" :stroke-width="3" />
                         </div>
                     </div>
 
                     <div
-                        class="relative group bg-light-gray rounded-2xl p-6 flex justify-center mb-6 border border-gray-border/50 cursor-pointer hover:bg-light transition-colors duration-300">
+                        class="relative group bg-light-gray dark:bg-dark-surface rounded-2xl p-4 sm:p-6 flex justify-center mb-5 sm:mb-6 border border-gray-border/50 dark:border-dark-border cursor-pointer hover:bg-light dark:hover:bg-dark-surface/80 transition-colors duration-300">
                         <div
-                            class="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-accent/30 transition-colors duration-300">
+                            class="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-accent/30 dark:group-hover:border-accent/50 transition-colors duration-300">
                         </div>
                         <div class="relative z-10 animate-[pulse_3s_ease-in-out_infinite] group-hover:animate-none">
-                            <QrCode :size="80"
-                                class="text-primary group-hover:scale-105 transition-transform duration-300"
+                            <QrCode
+                                class="w-16 h-16 sm:w-20 sm:h-20 text-primary dark:text-dark-text group-hover:scale-105 transition-transform duration-300"
                                 :stroke-width="1.5" />
                         </div>
 
                         <!-- Tooltip -->
                         <div
-                            class="absolute -top-10 left-1/2 -translate-x-1/2 bg-primary text-white text-[12px] font-medium py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-md z-20">
+                            class="absolute -top-10 left-1/2 -translate-x-1/2 bg-primary dark:bg-white text-white dark:text-primary text-[12px] font-medium py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-md z-20">
                             Scan to pay securely
                             <!-- Tooltip Arrow -->
-                            <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45">
+                            <div
+                                class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary dark:bg-white rotate-45">
                             </div>
                         </div>
                     </div>
 
                     <div
-                        class="flex items-center justify-center gap-2 bg-light text-primary text-[12px] font-medium py-2 px-4 rounded-full w-max mx-auto">
-                        <CheckCircle2 :size="14" class="text-accent" />
+                        class="flex items-center justify-center gap-2 bg-light dark:bg-dark-surface text-primary dark:text-dark-text text-[10px] sm:text-[12px] font-medium py-2 px-3 sm:px-4 rounded-full w-max mx-auto transition-colors duration-300 border border-transparent dark:border-dark-border">
+                        <CheckCircle2 :size="12"
+                            class="sm:w-3.5 sm:h-3.5 text-accent dark:text-accent shrink-0" />
                         Verified Identity Layer
                     </div>
                 </div>
