@@ -4,8 +4,8 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <div class="w-3 h-3 bg-primary dark:bg-accent rounded-sm"></div>
-                        <span class="text-[12px] font-medium text-primary dark:text-accent uppercase tracking-[0.08em]">Target
+                        <div class="w-3 h-3 bg-primary dark:bg-dark-muted rounded-sm"></div>
+                        <span class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">Target
                             Audience</span>
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold text-primary dark:text-dark-text leading-[1.2]">

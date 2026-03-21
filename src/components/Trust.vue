@@ -17,7 +17,7 @@
                             <div class="flex items-center gap-2">
                                 <span class="text-[24px] font-bold text-primary dark:text-dark-text">100%</span>
                                 <div
-                                    class="flex items-center gap-1 text-accent dark:text-accent text-[12px] font-medium bg-light dark:bg-dark-surface px-2 py-1 rounded-full transition-colors duration-300">
+                                    class="flex items-center gap-1 text-accent dark:text-dark-muted text-[12px] font-medium bg-light dark:bg-dark-surface px-2 py-1 rounded-full transition-colors duration-300">
                                     <TrendingUp :size="12" />
                                     No more typos
                                 </div>
@@ -29,8 +29,8 @@
                 <!-- Right: Text -->
                 <div class="w-full md:w-1/2" ref="textRef">
                     <div class="flex items-center gap-2 mb-6">
-                        <div class="w-3 h-3 bg-primary dark:bg-accent rounded-sm"></div>
-                        <span class="text-[12px] font-medium text-primary dark:text-accent uppercase tracking-[0.08em]">Trust &amp;
+                        <div class="w-3 h-3 bg-primary dark:bg-dark-muted rounded-sm"></div>
+                        <span class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">Trust &amp;
                             Security</span>
                     </div>
 
@@ -46,22 +46,22 @@
 
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
-                            <CheckCircle2 :size="20" class="text-accent dark:text-accent shrink-0 mt-1" />
+                            <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
                             <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong
                                     class="text-primary dark:text-dark-text font-bold">Money goes straight to your bank: </strong> No intermediaries. No holding funds. </span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <CheckCircle2 :size="20" class="text-accent dark:text-accent shrink-0 mt-1" />
+                            <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
                             <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong
                                     class="text-primary dark:text-dark-text font-bold">Verified payment identity:</strong> Customers know exactly who they're paying—no confusion. </span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <CheckCircle2 :size="20" class="text-accent dark:text-accent shrink-0 mt-1" />
+                            <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
                             <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong
                                     class="text-primary dark:text-dark-text font-bold">No more typing errors:</strong> QR codes and usernames remove the risk of wrong account numbers completely.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <CheckCircle2 :size="20" class="text-accent dark:text-accent shrink-0 mt-1" />
+                            <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
                             <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong class="text-primary dark:text-dark-text font-bold">Keep your details private:</strong> No need to share your bank account every time. </span>
                         </li>
                     </ul>

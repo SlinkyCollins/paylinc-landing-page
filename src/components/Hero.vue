@@ -94,7 +94,7 @@
                     <div
                         class="flex items-center justify-center gap-2 bg-light dark:bg-dark-surface text-primary dark:text-dark-text text-[10px] sm:text-[12px] font-medium py-2 px-3 sm:px-4 rounded-full w-max mx-auto transition-colors duration-300 border border-transparent dark:border-dark-border">
                         <CheckCircle2 :size="12"
-                            class="sm:w-3.5 sm:h-3.5 text-accent dark:text-accent shrink-0" />
+                            class="sm:w-3.5 sm:h-3.5 text-accent dark:text-dark-muted shrink-0" />
                         Verified Identity Layer
                     </div>
                 </div>
