@@ -1,23 +1,23 @@
 <template>
     <section class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300 overflow-x-clip" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+            <div class="flex flex-col md:flex-row md:items-stretch items-center gap-12 md:gap-16 lg:gap-24">
                 <!-- Left: Image -->
-                <div class="w-full md:w-1/2 relative" ref="imageRef">
+                <div class="w-full md:w-1/2 relative flex" ref="imageRef">
                     <div
-                        class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0 transition-shadow duration-300">
+                        class="relative w-full max-w-lg md:max-w-none mx-auto md:mx-0 rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-4/3 md:aspect-auto md:min-h-112 lg:aspect-3/2 lg:min-h-0 transition-shadow duration-300">
                         <img :src="handshakeImg" alt="Business handshake" class="w-full h-full object-cover dark:opacity-80 transition-opacity duration-300"
                             loading="lazy" />
                         <div class="absolute inset-0 bg-primary/10 dark:bg-dark-base/40 mix-blend-multiply transition-colors duration-300"></div>
 
                         <!-- Overlay Badge -->
                         <div
-                            class="absolute bottom-6 right-6 bg-white dark:bg-dark-elevated rounded-2xl p-4 shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-1 min-w-35 transition-colors duration-300 border border-transparent dark:border-dark-border">
+                            class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 bg-white dark:bg-dark-elevated rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-1 min-w-34 sm:min-w-35 transition-colors duration-300 border border-transparent dark:border-dark-border">
                             <span class="text-[12px] text-text-secondary dark:text-dark-muted font-medium">Transfer Accuracy</span>
                             <div class="flex items-center gap-2">
-                                <span class="text-[24px] font-bold text-primary dark:text-dark-text">100%</span>
+                                <span class="text-[20px] sm:text-[24px] font-bold text-primary dark:text-dark-text">100%</span>
                                 <div
-                                    class="flex items-center gap-1 text-accent dark:text-dark-muted text-[12px] font-medium bg-light dark:bg-dark-surface px-2 py-1 rounded-full transition-colors duration-300">
+                                    class="flex items-center gap-1 text-accent dark:text-dark-muted text-[11px] sm:text-[12px] font-medium bg-light dark:bg-dark-surface px-2 py-1 rounded-full transition-colors duration-300">
                                     <TrendingUp :size="12" />
                                     No more typos
                                 </div>
