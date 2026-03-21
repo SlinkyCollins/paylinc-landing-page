@@ -4,7 +4,6 @@ import BackToTop from './components/BackToTop.vue'
 import Footer from './components/Footer.vue'
 import Hero from './components/Hero.vue'
 import Navbar from './components/Navbar.vue'
-import PaymentApps from './components/PaymentApps.vue'
 import Problem from './components/Problem.vue'
 import Process from './components/Process.vue'
 import Signup from './components/Signup.vue'
@@ -18,7 +17,6 @@ import { SpeedInsights } from '@vercel/speed-insights/vue'
     <Navbar />
     <main>
       <Hero />
-      <PaymentApps />
       <Problem />
       <Process />
       <Audience />

@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
+    <section class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300 overflow-x-clip" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
                 <!-- Left: Image -->

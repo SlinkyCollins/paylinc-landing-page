@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-8 pb-12 md:pt-12 md:pb-24 px-3 sm:px-5 md:px-8 max-w-300 mx-auto" ref="containerRef">
+    <section class="pt-8 pb-12 md:pt-12 md:pb-24 px-3 sm:px-5 md:px-8 max-w-300 mx-auto overflow-x-clip" ref="containerRef">
         <div
             class="flex flex-col md:flex-row rounded-4xl overflow-hidden shadow-[0_8px_32px_rgba(26,60,56,0.08)] min-h-140">
             <!-- Left Side -->
