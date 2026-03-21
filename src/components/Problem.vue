@@ -1,23 +1,23 @@
 <template>
-    <section id="problem" class="relative bg-light-gray py-10 sm:py-16 md:py-24 overflow-hidden" ref="sectionRef">
+    <section id="problem" class="relative bg-light-gray dark:bg-dark-surface py-10 sm:py-16 md:py-24 overflow-hidden transition-colors duration-300" ref="sectionRef">
         <!-- Subtle radial gradient -->
         <div
-            class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,var(--color-light)_0%,transparent_70%)] opacity-30 pointer-events-none">
+            class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,var(--color-light)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_top_right,var(--color-dark-elevated)_0%,transparent_70%)] opacity-30 pointer-events-none transition-colors duration-300">
         </div>
 
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 relative z-10">
             <div class="flex flex-col mb-12">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <div class="w-3 h-3 bg-primary rounded-sm"></div>
-                        <span class="text-[12px] font-medium text-primary uppercase tracking-[0.08em]">The
+                        <div class="w-3 h-3 bg-primary dark:bg-accent rounded-sm"></div>
+                        <span class="text-[12px] font-medium text-primary dark:text-accent uppercase tracking-[0.08em]">The
                             Problem</span>
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
-                        <span class="text-primary">Bank transfers are broken.</span><br />
-                        <span class="text-text-secondary">Receiving payments shouldn't feel this stressful.</span>
+                        <span class="text-primary dark:text-dark-text">Bank transfers are broken.</span><br />
+                        <span class="text-text-secondary dark:text-dark-muted">Receiving payments shouldn't feel this stressful.</span>
                     </h2>
-                    <p class="text-[16px] text-[#42514D] leading-[1.6] max-w-150">
+                    <p class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-150">
                         Customers mistype account numbers.
                         Merchants repeat details all day.
                         Every transfer comes with doubt.
@@ -32,11 +32,22 @@
             </div>
 
             <TransitionGroup name="card-expand" tag="div" class="grid grid-cols-1 md:grid-cols-3 gap-6" ref="cardsRef">
-                <ReusableCard v-for="card in visibleCards" :key="card.title" :title="card.title" :body="card.body"
-                    :size="'default'" :icon-wrapper-class="card.iconWrapperClass"
-                    :body-color-class="'text-text-secondary'" :class-name="'min-h-55'">
+                <ReusableCard 
+                    v-for="card in visibleCards" 
+                    :key="card.title" 
+                    :title="card.title" 
+                    :body="card.body"
+                    :size="'default'"
+                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-3'" 
+                    :icon-wrapper-class="card.iconWrapperClass"
+                    :body-color-class="'text-text-secondary dark:text-dark-muted'" 
+                    :class-name="'bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border'">
                     <template #icon>
-                        <component :is="card.icon" :size="20" :class="card.iconClass" />
+                        <component 
+                            :is="card.icon" 
+                            :size="20" 
+                            :class="card.iconClass" 
+                        />
                     </template>
                 </ReusableCard>
             </TransitionGroup>
@@ -71,43 +82,43 @@ const cards = [
         title: 'Costly Typos',
         body: 'One wrong digit sends money to the wrong person. Reversing it is slow, stressful, and sometimes impossible.',
         icon: Hash,
-        iconClass: 'text-alert-red-icon',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-red-bg flex items-center justify-center mb-6'
+        iconClass: 'text-alert-red-icon dark:text-red-400',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-red-bg dark:bg-red-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Endless Repetition',
         body: 'You repeat your bank details all day. Customers still get them wrong.',
         icon: Repeat,
-        iconClass: 'text-alert-yellow-icon',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'
+        iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Trust Issues',
         body: "Customers hesitate when they're not sure who they're paying.",
         icon: ShieldAlert,
-        iconClass: 'text-success-green-icon',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'
+        iconClass: 'text-success-green-icon dark:text-yellow-400',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Identity Exposure',
         body: 'Merchants share full bank details publicly all day. This exposes you to fraud and unnecessary scrutiny.',
         icon: EyeOff,
-        iconClass: 'text-alert-yellow-icon',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'
+        iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Verification Delays',
         body: '"Send me the screenshot." Waiting for confirmation slows down your business and frustrates customers.',
         icon: Clock3,
-        iconClass: 'text-info-blue-icon',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-info-blue-bg flex items-center justify-center mb-6'
+        iconClass: 'text-info-blue-icon dark:text-blue-400',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-info-blue-bg dark:bg-blue-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Payment confusion',
         body: 'Different apps, different formats, constant uncertainty. Payments become frustrating instead of seamless.',
         icon: GitCompareArrows,
-        iconClass: 'text-alert-yellow-icon',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg flex items-center justify-center mb-6'
+        iconClass: 'text-alert-yellow-icon dark:text-dark-text',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-light dark:bg-dark-surface flex items-center justify-center mb-6'
     }
 ]
 

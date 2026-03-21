@@ -1,17 +1,17 @@
 <template>
-    <section id="process" class="bg-primary py-10 sm:py-16 md:py-24" ref="sectionRef">
+    <section id="process" class="bg-primary dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 text-center">
-            <h3 class="text-[12px] font-medium text-light uppercase tracking-[0.08em] mb-4">
+            <h3 class="text-[12px] font-medium text-light dark:text-dark-muted uppercase tracking-[0.08em] mb-4">
                 Simple 3-step process
             </h3>
-            <h2 class="text-[32px] md:text-[36px] font-extrabold text-white mb-16 md:mb-24">
+            <h2 class="text-[32px] md:text-[36px] font-extrabold text-white dark:text-dark-text mb-16 md:mb-24">
                 Your name becomes your payment<br class="hidden md:block" /> identity
             </h2>
 
             <div class="relative max-w-225 mx-auto">
                 <!-- Dotted Line connecting steps -->
                 <div class="absolute top-5.5 left-[16.66%] right-[16.66%] h-0.5 hidden md:block z-0">
-                    <div ref="lineRef" class="h-full border-t-2 border-dashed border-light/30"
+                    <div ref="lineRef" class="h-full border-t-2 border-dashed border-light/30 dark:border-dark-border"
                         :style="{ width: '0%' }" />
                 </div>
 
@@ -19,11 +19,11 @@
                     <!-- Step 1 -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-11 h-11 rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
+                            class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             1
                         </div>
-                        <h3 class="text-[18px] font-bold text-white mb-3">Create your identity</h3>
-                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Create your identity</h3>
+                        <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
                             Sign up and claim your unique Paylinc username (e.g. @JaneStore).
                         </p>
                     </div>
@@ -31,11 +31,11 @@
                     <!-- Step 2 -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-11 h-11 rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
+                            class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             2
                         </div>
-                        <h3 class="text-[18px] font-bold text-white mb-3">Link your bank</h3>
-                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Link your bank</h3>
+                        <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
                             Add your bank account details. Payments go straight to your bank. We never hold your funds.
                         </p>
                     </div>
@@ -43,11 +43,11 @@
                     <!-- Step 3 -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-11 h-11 rounded-full bg-light text-primary flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg">
+                            class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             3
                         </div>
-                        <h3 class="text-[18px] font-bold text-white mb-3">Receive payments</h3>
-                        <p class="text-[16px] text-light/80 leading-[1.6] max-w-65">
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Receive payments</h3>
+                        <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
                             Share your username or display your QR code. Customers pay you instantly without typing bank
                             details.
                         </p>

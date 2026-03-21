@@ -1,18 +1,18 @@
 <template>
-    <section id="audience" class="bg-white py-10 sm:py-16 md:py-24" ref="sectionRef">
+    <section id="audience" class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <div class="w-3 h-3 bg-primary rounded-sm"></div>
-                        <span class="text-[12px] font-medium text-primary uppercase tracking-[0.08em]">Target
+                        <div class="w-3 h-3 bg-primary dark:bg-accent rounded-sm"></div>
+                        <span class="text-[12px] font-medium text-primary dark:text-accent uppercase tracking-[0.08em]">Target
                             Audience</span>
                     </div>
-                    <h2 class="text-[28px] md:text-[32px] font-bold text-primary leading-[1.2]">
+                    <h2 class="text-[28px] md:text-[32px] font-bold text-primary dark:text-dark-text leading-[1.2]">
                         Built for anyone who receives payments
                     </h2>
                 </div>
-                <p class="text-[16px] text-text-secondary mt-4 md:mt-0">
+                <p class="text-[16px] text-text-secondary dark:text-dark-muted mt-4 md:mt-0">
                     Solving payment friction for...
                 </p>
             </div>
@@ -21,48 +21,52 @@
                 <!-- Card 1 -->
                 <ReusableCard title="Merchants" body="Speed up checkout with instant scan-to-pay QRs."
                     :variant="'gray'" :size="'audience'"
-                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
-                    :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
-                    :body-class-name="'text-[14px] text-text-secondary leading-[1.5]'"
-                    :body-color-class="'text-text-secondary'">
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light dark:bg-dark-elevated flex items-center justify-center mb-4'"
+                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-2'"
+                    :body-class-name="'text-[14px] text-text-secondary dark:text-dark-muted leading-[1.5]'"
+                    :body-color-class="'text-text-secondary dark:text-dark-muted'"
+                    :class-name="'bg-light-gray dark:bg-dark-surface rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[160px] flex flex-col border border-transparent dark:border-dark-border'">
                     <template #icon>
-                        <Store :size="20" class="text-primary" />
+                        <Store :size="20" class="text-primary dark:text-dark-text" />
                     </template>
                 </ReusableCard>
 
                 <!-- Card 2 -->
                 <ReusableCard title="POS Operators" body="Reduce errors from manually entering account numbers."
                     :variant="'gray'" :size="'audience'"
-                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
-                    :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
-                    :body-class-name="'text-[14px] text-text-secondary leading-[1.5]'"
-                    :body-color-class="'text-text-secondary'">
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light dark:bg-dark-elevated flex items-center justify-center mb-4'"
+                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-2'"
+                    :body-class-name="'text-[14px] text-text-secondary dark:text-dark-muted leading-[1.5]'"
+                    :body-color-class="'text-text-secondary dark:text-dark-muted'"
+                    :class-name="'bg-light-gray dark:bg-dark-surface rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[160px] flex flex-col border border-transparent dark:border-dark-border'">
                     <template #icon>
-                        <Calculator :size="20" class="text-primary" />
+                        <Calculator :size="20" class="text-primary dark:text-dark-text" />
                     </template>
                 </ReusableCard>
 
                 <!-- Card 3 -->
                 <ReusableCard title="Small Businesses" body="Look more professional with a branded payment identity."
                     :variant="'gray'" :size="'audience'"
-                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
-                    :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
-                    :body-class-name="'text-[14px] text-text-secondary leading-[1.5]'"
-                    :body-color-class="'text-text-secondary'">
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light dark:bg-dark-elevated flex items-center justify-center mb-4'"
+                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-2'"
+                    :body-class-name="'text-[14px] text-text-secondary dark:text-dark-muted leading-[1.5]'"
+                    :body-color-class="'text-text-secondary dark:text-dark-muted'"
+                    :class-name="'bg-light-gray dark:bg-dark-surface rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[160px] flex flex-col border border-transparent dark:border-dark-border'">
                     <template #icon>
-                        <Briefcase :size="20" class="text-primary" />
+                        <Briefcase :size="20" class="text-primary dark:text-dark-text" />
                     </template>
                 </ReusableCard>
 
                 <!-- Card 4 -->
                 <ReusableCard title="Students & Individuals" body="Receive money safely from classmates, customers, or clients without sharing bank details."
                     :variant="'gray'" :size="'audience'"
-                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light flex items-center justify-center mb-4'"
-                    :title-class-name="'text-[18px] font-semibold text-primary mb-2'"
-                    :body-class-name="'text-[14px] text-text-secondary leading-[1.5]'"
-                    :body-color-class="'text-text-secondary'">
+                    :icon-wrapper-class="'w-10 h-10 rounded-lg bg-light dark:bg-dark-elevated flex items-center justify-center mb-4'"
+                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-2'"
+                    :body-class-name="'text-[14px] text-text-secondary dark:text-dark-muted leading-[1.5]'"
+                    :body-color-class="'text-text-secondary dark:text-dark-muted'"
+                    :class-name="'bg-light-gray dark:bg-dark-surface rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[160px] flex flex-col border border-transparent dark:border-dark-border'">
                     <template #icon>
-                        <User :size="20" class="text-primary" />
+                        <User :size="20" class="text-primary dark:text-dark-text" />
                     </template>
                 </ReusableCard>
             </div>

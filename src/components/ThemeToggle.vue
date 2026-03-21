@@ -8,6 +8,7 @@ const { theme, toggleTheme } = useTheme()
 <template>
   <button
     @click="toggleTheme"
+    title="Toggle Light/Dark mode"
     class="relative w-10 h-10 rounded-full flex items-center justify-center text-[#42514D] hover:text-primary hover:bg-light dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/10 transition-colors overflow-hidden cursor-pointer"
     aria-label="Toggle theme"
   >
