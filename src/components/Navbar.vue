@@ -19,10 +19,10 @@
           it's For</a>
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="ml-3 flex items-center gap-2 sm:ml-0 sm:gap-4">
         <ThemeToggle />
         <a href="#signup">
-          <button class="btn-primary h-10 px-6">
+          <button class="btn-primary h-9 px-3.5 text-[13px] whitespace-nowrap sm:h-10 sm:px-6 sm:text-[16px]">
             Join Early Access
           </button>
         </a>
