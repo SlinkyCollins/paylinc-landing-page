@@ -2,7 +2,7 @@
     <section id="signup" class="bg-light-gray dark:bg-dark-surface py-8 max-[320px]:py-6 sm:py-16 md:py-24 transition-colors duration-300 overflow-x-clip" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 max-[320px]:px-2.5 sm:px-5 md:px-8 flex justify-center overflow-x-clip">
             <div ref="cardRef"
-                class="w-[90vw] max-w-[90vw] min-[321px]:max-w-[88vw] sm:w-full sm:max-w-150 bg-primary dark:bg-dark-base rounded-[2rem] max-[320px]:rounded-[1.5rem] p-4 max-[320px]:p-3.5 min-[321px]:p-5 sm:p-6 md:p-12 shadow-[0_24px_64px_rgba(26,60,56,0.16)] dark:shadow-[0_24px_64px_rgba(0,0,0,0.6)] flex flex-col items-center text-center transition-colors duration-300 border border-transparent dark:border-dark-border">
+                class="w-[90vw] max-w-[90vw] min-[321px]:max-w-[88vw] sm:w-full sm:max-w-150 bg-primary dark:bg-dark-base rounded-4xl max-[320px]:rounded-3xl p-4 max-[320px]:p-3.5 min-[321px]:p-5 sm:p-6 md:p-12 shadow-[0_24px_64px_rgba(26,60,56,0.16)] dark:shadow-[0_24px_64px_rgba(0,0,0,0.6)] flex flex-col items-center text-center transition-colors duration-300 border border-transparent dark:border-dark-border">
                 <h2 class="text-[24px] max-[320px]:text-[22px] min-[321px]:text-[26px] md:text-[32px] font-extrabold text-white dark:text-dark-text mb-3 leading-tight">
                     Be among the first to try Paylinc
                 </h2>
@@ -80,9 +80,9 @@
                     </div>
                 </transition>
 
-                <div class="flex items-center justify-center gap-2 text-[11px] max-[320px]:text-[10px] min-[321px]:text-[12px] text-light/60 dark:text-dark-muted">
-                    <Lock :size="12" />
-                    <span>We'll only send you important updates. No spam.</span>
+                <div class="flex w-full items-start justify-center gap-2 text-[11px] max-[320px]:text-[10px] min-[321px]:text-[12px] text-light/60 dark:text-dark-muted">
+                    <Lock :size="12" class="mt-0.5 shrink-0" />
+                    <span class="min-w-0 text-left leading-[1.4]">We'll only send you important updates. No spam.</span>
                 </div>
             </div>
         </div>
