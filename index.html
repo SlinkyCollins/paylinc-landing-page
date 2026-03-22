@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paylinc - One Identity for All Your Payments</title>
-    <meta name="description" content="Paylinc helps you receive payments safely using a verified username or QR code instead of sharing bank details.">
-  </head>
-  <body class="bg-white dark:bg-dark-base text-text-primary dark:text-dark-text transition-colors duration-300">
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <!-- Core -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2f2e" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#081210" />
+  <title>Paylinc | Safer Payments with Verified Usernames</title>
+  <meta name="description"
+    content="Paylinc helps individuals, merchants, and small businesses receive payments securely using verified usernames or QR codes instead of sharing bank details." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://paylinc.vercel.app/" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Paylinc" />
+  <meta property="og:title" content="Paylinc | Safer Payments with Verified Usernames" />
+  <meta property="og:description"
+    content="Paylinc helps individuals, merchants, and small businesses receive payments securely using verified usernames or QR codes instead of sharing bank details." />
+  <meta property="og:url" content="https://paylinc.vercel.app/" />
+  <meta property="og:image" content="https://paylinc.vercel.app/og-image.png" />
+  <meta property="og:image:alt" content="Paylinc secure payment identity platform" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paylinc | Safer Payments with Verified Usernames" />
+  <meta name="twitter:description"
+    content="Paylinc helps individuals, merchants, and small businesses receive payments securely using verified usernames or QR codes instead of sharing bank details." />
+  <meta name="twitter:image" content="https://paylinc.vercel.app/og-image.png" />
+  <meta name="twitter:image:alt" content="Paylinc secure payment identity platform" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Paylinc",
+            "url": "https://paylinc.vercel.app/",
+            "description": "Paylinc helps individuals, merchants, and small businesses receive payments securely using verified usernames or QR codes instead of sharing bank details.",
+            "publisher": {
+              "@id": "https://paylinc.vercel.app/#organization"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://paylinc.vercel.app/#organization",
+            "name": "Paylinc",
+            "url": "https://paylinc.vercel.app/",
+            "logo": "https://paylinc.vercel.app/logo.png"
+          }
+        ]
+      }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-dark-base text-text-primary dark:text-dark-text transition-colors duration-300">
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
