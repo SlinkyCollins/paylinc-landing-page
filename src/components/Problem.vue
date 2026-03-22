@@ -1,5 +1,7 @@
 <template>
-    <section id="problem" class="relative bg-light-gray dark:bg-dark-surface py-10 sm:py-16 md:py-24 overflow-hidden transition-colors duration-300" ref="sectionRef">
+    <section id="problem"
+        class="relative bg-light-gray dark:bg-dark-surface py-10 sm:py-16 md:py-24 overflow-hidden transition-colors duration-300"
+        ref="sectionRef">
         <!-- Subtle radial gradient -->
         <div
             class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,var(--color-light)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_top_right,var(--color-dark-elevated)_0%,transparent_70%)] opacity-30 pointer-events-none transition-colors duration-300">
@@ -10,12 +12,14 @@
                 <div>
                     <div class="flex items-center gap-2 mb-4">
                         <div class="w-3 h-3 bg-primary dark:bg-dark-muted rounded-sm"></div>
-                        <span class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">The
+                        <span
+                            class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">The
                             Problem</span>
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
                         <span class="text-primary dark:text-dark-text">Bank transfers are broken.</span><br />
-                        <span class="text-text-secondary dark:text-dark-muted">Receiving payments shouldn't feel this stressful.</span>
+                        <span class="text-text-secondary dark:text-dark-muted">Receiving payments shouldn't feel this
+                            stressful.</span>
                     </h2>
                     <p class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-150">
                         Customers mistype account numbers.
@@ -31,42 +35,25 @@
                 </div>
             </div>
 
-            <TransitionGroup name="card-expand" tag="div" class="grid grid-cols-1 md:grid-cols-3 gap-6" ref="cardsRef">
-                <ReusableCard 
-                    v-for="card in visibleCards" 
-                    :key="card.title" 
-                    :title="card.title" 
-                    :body="card.body"
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" ref="cardsRef">
+                <ReusableCard v-for="card in cards" :key="card.title" :title="card.title" :body="card.body"
                     :size="'default'"
-                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-3'" 
+                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-3'"
                     :icon-wrapper-class="card.iconWrapperClass"
-                    :body-color-class="'text-text-secondary dark:text-dark-muted'" 
+                    :body-color-class="'text-text-secondary dark:text-dark-muted'"
                     :class-name="'bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border'">
                     <template #icon>
-                        <component 
-                            :is="card.icon" 
-                            :size="20" 
-                            :class="card.iconClass" 
-                        />
+                        <component :is="card.icon" :size="20" :class="card.iconClass" />
                     </template>
                 </ReusableCard>
-            </TransitionGroup>
-
-            <div class="mt-8 flex justify-center">
-                <button type="button" @click="toggleCards"
-                    class="btn-secondary h-11 px-6 inline-flex items-center gap-2">
-                    {{ isExpanded ? 'View less' : 'View more' }}
-                    <ChevronUp v-if="isExpanded" :size="16" />
-                    <ChevronDown v-else :size="16" />
-                </button>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
-import { ShieldAlert, Hash, Repeat, EyeOff, Clock3, GitCompareArrows, ChevronDown, ChevronUp } from 'lucide-vue-next'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { ShieldAlert, Hash, Repeat } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ReusableCard from './ReusableCard.vue'
@@ -75,7 +62,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const sectionRef = ref(null)
 const cardsRef = ref(null)
-const isExpanded = ref(false)
 
 const cards = [
     {
@@ -87,76 +73,21 @@ const cards = [
     },
     {
         title: 'Endless Repetition',
-        body: 'You repeat your bank details all day. Customers still get them wrong.',
+        body: 'You repeat your bank details all day. Customers still get them wrong anyway.',
         icon: Repeat,
         iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Trust Issues',
-        body: "Customers hesitate when they're not sure who they're paying.",
+        body: "Customers hesitate when they're not fully sure they're sending money to the right person or business.",
         icon: ShieldAlert,
         iconClass: 'text-success-green-icon dark:text-yellow-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
-    },
-    {
-        title: 'Identity Exposure',
-        body: 'Merchants share full bank details publicly all day. This exposes you to fraud and unnecessary scrutiny.',
-        icon: EyeOff,
-        iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
-    },
-    {
-        title: 'Verification Delays',
-        body: '"Send me the screenshot." Waiting for confirmation slows down your business and frustrates customers.',
-        icon: Clock3,
-        iconClass: 'text-info-blue-icon dark:text-blue-400',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-info-blue-bg dark:bg-blue-900/30 flex items-center justify-center mb-6'
-    },
-    {
-        title: 'Payment confusion',
-        body: 'Different apps, different formats, constant uncertainty. Payments become frustrating instead of seamless.',
-        icon: GitCompareArrows,
-        iconClass: 'text-alert-yellow-icon dark:text-dark-text',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-light dark:bg-dark-surface flex items-center justify-center mb-6'
     }
 ]
 
-const visibleCards = computed(() => {
-    return isExpanded.value ? cards : cards.slice(0, 3)
-})
-
 const getCardsContainer = () => cardsRef.value?.$el || cardsRef.value
-
-const toggleCards = async () => {
-    const container = getCardsContainer()
-
-    if (!container) {
-        isExpanded.value = !isExpanded.value
-        return
-    }
-
-    const startHeight = container.getBoundingClientRect().height
-    isExpanded.value = !isExpanded.value
-
-    await nextTick()
-
-    const endHeight = container.getBoundingClientRect().height
-
-    if (startHeight === endHeight) {
-        return
-    }
-
-    gsap.set(container, { height: startHeight, overflow: 'hidden' })
-    gsap.to(container, {
-        height: endHeight,
-        duration: 0.35,
-        ease: 'power2.inOut',
-        onComplete: () => {
-            gsap.set(container, { clearProps: 'height,overflow' })
-        }
-    })
-}
 
 let ctx
 
@@ -174,13 +105,13 @@ onMounted(() => {
 
             gsap.fromTo(
                 targets,
-                { opacity: 0, y: 40 },
+                { opacity: 0, y: 24 },
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.3,
-                    stagger: 0.2,
-                    ease: 'power3.out',
+                    duration: 0.42,
+                    stagger: 0.12,
+                    ease: 'power2.out',
                     overwrite: 'auto',
                     onComplete: () => {
                         targets.forEach((cardEl) => {
@@ -200,20 +131,6 @@ onMounted(() => {
                 animateCards(initialCards)
             }
         })
-
-        watch(
-            isExpanded,
-            async (expanded) => {
-                if (!expanded) {
-                    return
-                }
-
-                await nextTick()
-                const newCards = getCardElements().filter((cardEl) => cardEl.dataset.animated !== 'true')
-                animateCards(newCards)
-            },
-            { flush: 'post' }
-        )
     }, sectionRef.value)
 })
 
@@ -221,29 +138,3 @@ onUnmounted(() => {
     ctx?.revert()
 })
 </script>
-
-<style scoped>
-.card-expand-enter-active,
-.card-expand-leave-active {
-    transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.card-expand-leave-active {
-    pointer-events: none;
-}
-
-.card-expand-move {
-    transition: transform 0.35s ease;
-}
-
-.card-expand-enter-from,
-.card-expand-leave-to {
-    opacity: 0;
-    transform: translateY(-12px);
-}
-
-.card-expand-leave-from {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style>
