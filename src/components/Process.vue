@@ -2,10 +2,10 @@
     <section id="process" class="bg-primary dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
         <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 text-center">
             <h3 class="text-[12px] font-medium text-light dark:text-dark-muted uppercase tracking-[0.08em] mb-4">
-                Simple 3-step process
+                Simple Process
             </h3>
             <h2 class="text-[32px] md:text-[36px] font-extrabold text-white dark:text-dark-text mb-16 md:mb-24">
-                Your name becomes your payment<br class="hidden md:block" /> identity
+                How Paylinc Works in 3 Steps
             </h2>
 
             <div class="relative max-w-225 mx-auto">
@@ -36,7 +36,7 @@
                         </div>
                         <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Link your bank</h3>
                         <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
-                            Add your bank account details. Payments go straight to your bank. We never hold your funds.
+                            Add your bank account details once. Payments go straight to your bank. We never hold your funds.
                         </p>
                     </div>
 

@@ -19,7 +19,7 @@
                                 <div
                                     class="flex items-center gap-1 text-accent dark:text-dark-muted text-[11px] sm:text-[12px] font-medium bg-light dark:bg-dark-surface px-2 py-1 rounded-full transition-colors duration-300">
                                     <TrendingUp :size="12" />
-                                    No more typos
+                                    Fewer typos
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                         <li class="flex items-start gap-3">
                             <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
                             <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong
-                                    class="text-primary dark:text-dark-text font-bold">No more typing errors:</strong> QR codes and usernames remove the risk of wrong account numbers completely.</span>
+                                    class="text-primary dark:text-dark-text font-bold">Fewer typing errors:</strong> QR codes and usernames reduce the risk of wrong account numbers.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />

@@ -22,15 +22,9 @@
                             stressful.</span>
                     </h2>
                     <p class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-150">
-                        Customers mistype account numbers.
-                        Merchants repeat details all day.
-                        Every transfer comes with doubt.
-
-                        Stop manually typing long numbers.
-                        Stop asking customers to recite details over the phone.
-
-                        Payments should be simple.
-                        Instead, they feel like a high-stakes typing test—one mistake, and the money is gone.
+                        Today's payment experience is full of friction. Customers mistype account numbers, merchants
+                        repeat details all day, and every transfer comes with doubt. Payments should be simple, but
+                        instead they feel like a high-stakes typing test.
                     </p>
                 </div>
             </div>
@@ -65,24 +59,24 @@ const cardsRef = ref(null)
 
 const cards = [
     {
-        title: 'Costly Typos',
+        title: 'Costly Mistakes',
         body: 'One wrong digit sends money to the wrong person. Reversing it is slow, stressful, and sometimes impossible.',
         icon: Hash,
         iconClass: 'text-alert-red-icon dark:text-red-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-red-bg dark:bg-red-900/30 flex items-center justify-center mb-6'
     },
     {
-        title: 'Endless Repetition',
-        body: 'You repeat your bank details all day. Customers still get them wrong anyway.',
+        title: 'Constant Repetition',
+        body: 'You keep sharing the same bank details again and again. It\'s tiring, clunky, and still easy for people to get wrong.',
         icon: Repeat,
         iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
-        title: 'Trust Issues',
-        body: "Customers hesitate when they're not fully sure they're sending money to the right person or business.",
+        title: 'Transfer Doubt',
+        body: "Even after a name check, people still hesitate when they are not fully sure the money is going to the right person or business.",
         icon: ShieldAlert,
-        iconClass: 'text-success-green-icon dark:text-yellow-400',
+        iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     }
 ]
