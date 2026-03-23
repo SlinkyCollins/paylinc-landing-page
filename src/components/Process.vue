@@ -4,7 +4,7 @@
             <h3 class="text-[12px] font-medium text-light dark:text-dark-muted uppercase tracking-[0.08em] mb-4">
                 Simple Process
             </h3>
-            <h2 class="text-[32px] md:text-[36px] font-extrabold text-white dark:text-dark-text mb-16 md:mb-24">
+            <h2 class="text-[32px] md:text-[36px] font-extrabold text-white dark:text-dark-text mb-16 md:mb-24 leading-snug">
                 How Paylinc Works in 3 Steps
             </h2>
 
