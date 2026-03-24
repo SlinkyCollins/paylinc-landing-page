@@ -17,12 +17,11 @@
                             Problem</span>
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
-                        <span class="text-primary dark:text-dark-text">Transport payments shouldn’t feel this stressful</span>
+                        <span class="text-primary dark:text-dark-text">Transport is already stressful.</span><br />
+                        <span className="text-text-secondary dark:text-dark-muted">Paying for it shouldn't be.</span>
                     </h2>
                     <p class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-150">
-                        Today’s transport experience is full of friction. Passengers wait for change, drivers lose
-                        time, and every transfer comes with delays. Moving around should be simple. Instead, it feels
-                        like a daily struggle.
+                        Every day, commuters face the same friction: no change, delays as people pay one by one, arguments over money, and wasted time before movement. Drivers repeat prices all day, passengers keep searching for cash, and simple trips become frustrating. Transport should move people forward, not slow them down.
                     </p>
                 </div>
             </div>
@@ -57,29 +56,29 @@ const cardsRef = ref(null)
 
 const cards = [
     {
-        title: 'No change delays',
-        body: 'Waiting for the driver or conductor to find exact change wastes time and causes unnecessary arguments.',
+        title: 'No Change Wahala',
+        body: 'Passengers don\'t have exact cash. Drivers don\'t have change. Trips start with stress and arguments.',
         icon: TriangleAlert,
         iconClass: 'text-alert-red-icon dark:text-red-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-red-bg dark:bg-red-900/30 flex items-center justify-center mb-6'
     },
     {
         title: 'Slow boarding',
-        body: 'Fumbling for cash or waiting for bank transfers to confirm slows down everyone. The bus can\'t move until everyone pays.',
+        body: 'People pay one after another. Queues build up. Movement slows down.',
         iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
         icon: ShieldAlert,
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
-        title: 'Payment confusion',
-        body: '"Did the transfer drop?" Repeated back-and-forth during transfers creates tension between drivers and passengers.',
+        title: 'Cash Leakages',
+        body: 'Drivers and operators lose money through missing cash and poor tracking.',
         icon: Clock,
         iconClass: 'text-info-blue-icon dark:text-blue-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-info-blue-bg dark:bg-blue-900/30 flex items-center justify-center mb-6'
     },
     {
-        title: 'Cash dependency',
-        body: 'Relying on physical cash means you can\'t travel if ATMs are down or you don\'t have the exact fare.',
+        title: 'Daily Friction',
+        body: 'Same conversation every ride: "How much?" "Do you have change?"',
         icon: TriangleAlert,
         iconClass: 'text-primary dark:text-dark-text',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-light dark:bg-dark-surface flex items-center justify-center mb-6'

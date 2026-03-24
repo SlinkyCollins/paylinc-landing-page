@@ -34,7 +34,7 @@
                             class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             2
                         </div>
-                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Select transport</h3>
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Select or identify the driver </h3>
                         <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
                             Scan the QR code on the bus or enter the driver's short ID.
                         </p>

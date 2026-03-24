@@ -32,7 +32,7 @@
                     <a href="#process">
                         <button
                             class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04] cursor-pointer">
-                            How it works
+                            See how it works
                         </button>
                     </a>
                 </div>
