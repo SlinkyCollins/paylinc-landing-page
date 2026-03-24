@@ -7,8 +7,8 @@ import Navbar from './components/Navbar.vue'
 import Problem from './components/Problem.vue'
 import Process from './components/Process.vue'
 import Signup from './components/Signup.vue'
+import Solution from './components/Solution.vue'
 import Trust from './components/Trust.vue'
-import WhyPaylinc from './components/WhyPaylinc.vue'
 import { SpeedInsights } from '@vercel/speed-insights/vue'
 </script>
 
@@ -19,10 +19,10 @@ import { SpeedInsights } from '@vercel/speed-insights/vue'
     <main>
       <Hero />
       <Problem />
+      <Solution />
       <Process />
-      <WhyPaylinc />
-      <Audience />
       <Trust />
+      <Audience />
       <Signup />
     </main>
     <Footer />

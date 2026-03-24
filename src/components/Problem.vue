@@ -1,138 +1,123 @@
 <template>
-    <section id="problem"
-        class="relative bg-light-gray dark:bg-dark-surface py-10 sm:py-16 md:py-24 overflow-hidden transition-colors duration-300"
-        ref="sectionRef">
-        <!-- Subtle radial gradient -->
-        <div
-            class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,var(--color-light)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_top_right,var(--color-dark-elevated)_0%,transparent_70%)] opacity-30 pointer-events-none transition-colors duration-300">
+  <section id="problem" class="relative bg-light-gray dark:bg-dark-surface py-10 sm:py-16 md:py-24 overflow-hidden transition-colors duration-300" ref="sectionRef">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,var(--color-light)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_top_right,var(--color-dark-elevated)_0%,transparent_70%)] opacity-30 pointer-events-none transition-colors duration-300"></div>
+
+    <div class="max-w-[1200px] mx-auto px-3 sm:px-5 md:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row gap-12 mb-16 items-center">
+        <div class="lg:w-1/2">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-3 h-3 bg-primary dark:bg-dark-muted rounded-sm"></div>
+            <span class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">The Problem</span>
+          </div>
+          <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
+            <span class="text-primary dark:text-dark-text">Transport is already stressful.<br>Paying for it shouldn’t be.</span>
+          </h2>
+          <div class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-[600px] space-y-4">
+            <p>Every day, commuters deal with:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>No change</li>
+              <li>Delays while people pay one by one</li>
+              <li>Arguments over money</li>
+              <li>Wasted time before movement</li>
+            </ul>
+            <p>Drivers repeat prices all day. Passengers search for cash. Simple trips become frustrating.</p>
+            <p class="font-bold text-primary dark:text-dark-text">Transport should move people forward — not slow them down.</p>
+          </div>
         </div>
 
-        <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 relative z-10">
-            <div class="flex flex-col mb-12">
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-3 h-3 bg-primary dark:bg-dark-muted rounded-sm"></div>
-                        <span
-                            class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">The
-                            Problem</span>
-                    </div>
-                    <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
-                        <span class="text-primary dark:text-dark-text">Transport is already stressful.</span><br />
-                        <span className="text-text-secondary dark:text-dark-muted">Paying for it shouldn't be.</span>
-                    </h2>
-                    <p class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-150">
-                        Every day, commuters face the same friction: no change, delays as people pay one by one, arguments over money, and wasted time before movement. Drivers repeat prices all day, passengers keep searching for cash, and simple trips become frustrating. Transport should move people forward, not slow them down.
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" ref="cardsRef">
-                <ReusableCard v-for="card in cards" :key="card.title" :title="card.title" :body="card.body"
-                    :size="'default'"
-                    :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-3'"
-                    :icon-wrapper-class="card.iconWrapperClass"
-                    :body-color-class="'text-text-secondary dark:text-dark-muted'"
-                    :class-name="'bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border'">
-                    <template #icon>
-                        <component :is="card.icon" :size="20" :class="card.iconClass" />
-                    </template>
-                </ReusableCard>
-            </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="relative rounded-[24px] overflow-hidden aspect-[4/3] shadow-lg border border-gray-border/50 dark:border-dark-border">
+            <img
+              src="https://images.unsplash.com/photo-1529171918672-ba6d0733a56c?q=80&w=800&auto=format&fit=crop"
+              alt="Traffic and transport stress"
+              class="w-full h-full object-cover dark:opacity-80 transition-opacity duration-300"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            >
+            <div class="absolute inset-0 bg-primary/10 dark:bg-dark-base/40 mix-blend-multiply"></div>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" ref="cardsRef">
+        <div class="bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border">
+          <div class="w-10 h-10 rounded-lg bg-alert-red-bg dark:bg-red-900/30 flex items-center justify-center mb-6">
+            <TriangleAlert :size="20" class="text-alert-red-icon dark:text-red-400" />
+          </div>
+          <h3 class="text-[18px] font-semibold text-primary dark:text-dark-text mb-3">No Change Wahala</h3>
+          <p class="text-[14px] text-text-secondary dark:text-dark-muted leading-[1.6]">
+            Passengers don’t have exact cash. Drivers don’t have change. Trips start with stress and arguments.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border">
+          <div class="w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6">
+            <ShieldAlert :size="20" class="text-alert-yellow-icon dark:text-yellow-400" />
+          </div>
+          <h3 class="text-[18px] font-semibold text-primary dark:text-dark-text mb-3">Slow Boarding</h3>
+          <p class="text-[14px] text-text-secondary dark:text-dark-muted leading-[1.6]">
+            People pay one after another. Queues build up. Movement slows down.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border">
+          <div class="w-10 h-10 rounded-lg bg-info-blue-bg dark:bg-blue-900/30 flex items-center justify-center mb-6">
+            <Clock :size="20" class="text-info-blue-icon dark:text-blue-400" />
+          </div>
+          <h3 class="text-[18px] font-semibold text-primary dark:text-dark-text mb-3">Cash Leakages</h3>
+          <p class="text-[14px] text-text-secondary dark:text-dark-muted leading-[1.6]">
+            Drivers and operators lose money through missing cash and poor tracking.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-dark-elevated rounded-[20px] p-6 shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 min-h-[220px] flex flex-col border border-transparent dark:border-dark-border">
+          <div class="w-10 h-10 rounded-lg bg-light dark:bg-dark-surface flex items-center justify-center mb-6">
+            <TriangleAlert :size="20" class="text-primary dark:text-dark-text" />
+          </div>
+          <h3 class="text-[18px] font-semibold text-primary dark:text-dark-text mb-3">Daily Friction</h3>
+          <p class="text-[14px] text-text-secondary dark:text-dark-muted leading-[1.6]">
+            Same conversation every ride: "How much?" "Do you have change?"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import { Clock, ShieldAlert, TriangleAlert } from 'lucide-vue-next'
+import { TriangleAlert, ShieldAlert, Clock } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import ReusableCard from './ReusableCard.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const sectionRef = ref(null)
 const cardsRef = ref(null)
 
-const cards = [
-    {
-        title: 'No Change Wahala',
-        body: 'Passengers don\'t have exact cash. Drivers don\'t have change. Trips start with stress and arguments.',
-        icon: TriangleAlert,
-        iconClass: 'text-alert-red-icon dark:text-red-400',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-red-bg dark:bg-red-900/30 flex items-center justify-center mb-6'
-    },
-    {
-        title: 'Slow boarding',
-        body: 'People pay one after another. Queues build up. Movement slows down.',
-        iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
-        icon: ShieldAlert,
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
-    },
-    {
-        title: 'Cash Leakages',
-        body: 'Drivers and operators lose money through missing cash and poor tracking.',
-        icon: Clock,
-        iconClass: 'text-info-blue-icon dark:text-blue-400',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-info-blue-bg dark:bg-blue-900/30 flex items-center justify-center mb-6'
-    },
-    {
-        title: 'Daily Friction',
-        body: 'Same conversation every ride: "How much?" "Do you have change?"',
-        icon: TriangleAlert,
-        iconClass: 'text-primary dark:text-dark-text',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-light dark:bg-dark-surface flex items-center justify-center mb-6'
-    }
-]
-
-const getCardsContainer = () => cardsRef.value?.$el || cardsRef.value
-
 let ctx
 
 onMounted(() => {
-    ctx = gsap.context(() => {
-        const getCardElements = () => {
-            const container = getCardsContainer()
-            return container?.children ? Array.from(container.children) : []
+  ctx = gsap.context(() => {
+    gsap.fromTo(
+      cardsRef.value?.children || [],
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sectionRef.value,
+          start: 'top 70%',
         }
-
-        const animateCards = (targets) => {
-            if (!targets.length) {
-                return
-            }
-
-            gsap.fromTo(
-                targets,
-                { opacity: 0, y: 24 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.42,
-                    stagger: 0.12,
-                    ease: 'power2.out',
-                    overwrite: 'auto',
-                    onComplete: () => {
-                        targets.forEach((cardEl) => {
-                            cardEl.dataset.animated = 'true'
-                        })
-                    }
-                }
-            )
-        }
-
-        ScrollTrigger.create({
-            trigger: sectionRef.value,
-            start: 'top 70%',
-            once: true,
-            onEnter: () => {
-                const initialCards = getCardElements().filter((cardEl) => cardEl.dataset.animated !== 'true')
-                animateCards(initialCards)
-            }
-        })
-    }, sectionRef.value)
+      }
+    )
+  }, sectionRef.value)
 })
 
 onUnmounted(() => {
-    ctx?.revert()
+  ctx?.revert()
 })
 </script>
