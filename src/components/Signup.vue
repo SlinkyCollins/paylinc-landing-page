@@ -20,10 +20,9 @@
                             <select v-model="form.userType" name="user_type" required
                                 class="w-full min-w-0 h-11 px-3.5 max-[320px]:px-3 rounded-lg bg-accent dark:bg-dark-elevated border border-accent dark:border-dark-border text-white dark:text-dark-text focus:outline-none focus:border-white/30 dark:focus:border-accent transition-colors text-[15px] sm:text-[16px] appearance-none cursor-pointer">
                                 <option disabled value="" class="text-white/60 dark:text-dark-muted">I am a...</option>
-                                <option value="merchant" class="text-white dark:text-dark-text">Merchant</option>
-                                <option value="pos_operator" class="text-white dark:text-dark-text">POS Operator</option>
-                                <option value="small_business" class="text-white dark:text-dark-text">Small Business</option>
-                                <option value="individual" class="text-white dark:text-dark-text">Individual</option>
+                                <option value="passenger" class="text-white dark:text-dark-text">Passenger</option>
+                                <option value="driver" class="text-white dark:text-dark-text">Driver</option>
+                                <option value="transport_company" class="text-white dark:text-dark-text">Transport Company</option>
                             </select>
 
                             <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60 dark:text-dark-muted">
@@ -36,7 +35,7 @@
                         </div>
                     </div>
 
-                    <input v-model.trim="form.email" type="email" name="email" placeholder="Email Address" required
+                    <input v-model.trim="form.email" type="email" name="email" placeholder="Email" required
                         class="w-full min-w-0 h-11 px-3.5 max-[320px]:px-3 rounded-lg bg-accent dark:bg-dark-elevated border border-accent dark:border-dark-border text-white dark:text-dark-text placeholder:text-white/60 dark:placeholder:text-dark-muted focus:outline-none focus:border-white/30 dark:focus:border-accent transition-colors text-[15px] sm:text-[16px]" />
 
                     <button type="submit" :disabled="isSubmitting"

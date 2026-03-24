@@ -9,16 +9,15 @@
                     <div
                         class="inline-flex items-center h-5 px-4 bg-light text-primary text-[12px] font-medium rounded-full mb-6">
                         <span class="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
-                        Safer Payments for Everyone
+                        Fast Transport Payments
                     </div>
 
                     <h1 class="text-[40px] md:text-[48px] font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                        One identity for<br /><span class="text-alert-yellow-icon">all</span> your<br />payments
+                        Cash shouldn't<br /><span class="text-alert-yellow-icon">stop</span> your<br />ride
                     </h1>
 
                     <p class="text-[16px] md:text-[18px] text-light/90 leading-[1.6] mb-10 max-w-120">
-                        Receive money safely with a verified username or QR code. No more sharing bank details or
-                        dealing with transfer mistakes.
+                        Pay for buses, Keke, and taxis in seconds — no cash, no delays, no confusion.
                     </p>
                 </div>
 
@@ -33,7 +32,7 @@
                     <a href="#process">
                         <button
                             class="bg-transparent text-white border border-white/30 font-bold text-[16px] h-11 px-7 rounded-full hover:bg-white/10 transition-all duration-200 ease-out hover:scale-[1.04] cursor-pointer">
-                            See How It Works
+                            How it works
                         </button>
                     </a>
                 </div>
@@ -42,7 +41,7 @@
             <!-- Right Side -->
             <div
                 class="w-full md:w-[40%] relative min-h-100 bg-gray-border dark:bg-dark-surface flex items-center justify-center p-6 sm:p-8 md:p-10 overflow-hidden transition-colors duration-300">
-                <img :src="heroImg" alt="Modern workspace"
+                <img :src="busImg" alt="Bus transport"
                     class="absolute inset-0 w-full h-full object-cover dark:opacity-80 transition-opacity duration-300"
                     loading="lazy" />
                 <div class="absolute inset-0 bg-primary/10"></div>
@@ -58,9 +57,9 @@
                             <div>
                                 <h3
                                     class="font-bold text-[14px] sm:text-[16px] text-primary dark:text-dark-text leading-tight">
-                                    David Miller</h3>
+                                    Driver 402</h3>
                                 <p class="text-[12px] sm:text-[14px] text-text-secondary dark:text-dark-muted">
-                                    @david_m_store</p>
+                                    Oshodi - CMS</p>
                             </div>
                         </div>
                         <div
@@ -95,7 +94,7 @@
                         class="flex items-center justify-center gap-2 bg-light dark:bg-dark-surface text-primary dark:text-dark-text text-[10px] sm:text-[12px] font-medium py-2 px-3 sm:px-4 rounded-full w-max mx-auto transition-colors duration-300 border border-transparent dark:border-dark-border">
                         <CheckCircle2 :size="12"
                             class="sm:w-3.5 sm:h-3.5 text-accent dark:text-dark-muted shrink-0" />
-                        Verified Identity Layer
+                        Instant Payment Verified
                     </div>
                 </div>
             </div>
@@ -104,7 +103,7 @@
 </template>
 
 <script setup>
-import heroImg from '@/assets/images/payment.webp'
+import busImg from '@/assets/images/bus.png' 
 import avatar from '@/assets/images/avatar.jpg'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { ArrowUpRight, CheckCircle2, QrCode } from 'lucide-vue-next'

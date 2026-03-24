@@ -5,7 +5,7 @@
                 Simple Process
             </h3>
             <h2 class="text-[32px] md:text-[36px] font-extrabold text-white dark:text-dark-text mb-16 md:mb-24 leading-snug">
-                How Paylinc Works in 3 Steps
+                How Paylinc works
             </h2>
 
             <div class="relative max-w-225 mx-auto">
@@ -22,9 +22,9 @@
                             class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             1
                         </div>
-                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Create your identity</h3>
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Open Paylinc</h3>
                         <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
-                            Sign up and claim your unique Paylinc username (e.g. @JaneStore).
+                            Open the app when you board. No need to count cash or ask for change.
                         </p>
                     </div>
 
@@ -34,9 +34,9 @@
                             class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             2
                         </div>
-                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Link your bank</h3>
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Select transport</h3>
                         <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
-                            Add your bank account details once. Payments go straight to your bank. We never hold your funds.
+                            Scan the QR code on the bus or enter the driver's short ID.
                         </p>
                     </div>
 
@@ -46,10 +46,9 @@
                             class="w-11 h-11 rounded-full bg-light dark:bg-dark-elevated text-primary dark:text-dark-text flex items-center justify-center font-bold text-[18px] mb-6 shadow-lg dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-300 border border-transparent dark:border-dark-border">
                             3
                         </div>
-                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Receive payments</h3>
+                        <h3 class="text-[18px] font-bold text-white dark:text-dark-text mb-3">Pay & Move</h3>
                         <p class="text-[16px] text-light/80 dark:text-dark-muted leading-[1.6] max-w-65">
-                            Share your username or display your QR code. Customers pay you instantly without typing bank
-                            details.
+                            Pay instantly. The driver gets notified immediately, and you enjoy your ride.
                         </p>
                     </div>
                 </div>

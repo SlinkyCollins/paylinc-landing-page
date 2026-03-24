@@ -10,11 +10,10 @@
                         Alternative</span>
                 </div>
                 <h2 class="text-[32px] md:text-[40px] font-bold text-primary dark:text-dark-text leading-[1.2] mb-6">
-                    Why not just use account numbers?
+                    Why not just use cash or bank transfers?
                 </h2>
                 <p class="text-[16px] md:text-[18px] text-text-secondary dark:text-dark-muted leading-[1.6]">
-                    Because 10-digit numbers were built for computers, not people. Here is why sharing them is holding
-                    you back.
+                    Because transport requires speed. Cash is clunky, and regular bank transfers are too slow for boarding a bus.
                 </p>
             </div>
 
@@ -48,23 +47,23 @@ gsap.registerPlugin(ScrollTrigger)
 const reasons = [
     {
         icon: AlertCircle,
-        title: 'Fragile by design',
-        description: 'One wrong digit sends money into the void. Account numbers are unforgiving and stressful to type.'
+        title: 'Cash means delays',
+        description: 'Looking for exact change slows down the whole bus. Drivers get impatient, and passengers get stressed.'
     },
     {
         icon: Search,
-        title: 'Name checks are a band-aid',
-        description: "Seeing a name before sending helps, but it doesn't stop the initial typo or the anxiety of double-checking."
+        title: 'Transfers are too slow',
+        description: 'Waiting for a bank transfer to drop while standing at the door holds everyone up.'
     },
     {
         icon: Copy,
-        title: 'The copy-paste chore',
-        description: 'Switching between chat and banking apps to copy, paste, and verify is a clunky, repetitive process.'
+        title: 'The network excuse',
+        description: 'Bad network means failed transfers and arguments with the driver. You need something that just works.'
     },
     {
         icon: ShieldCheck,
-        title: 'Absolute certainty',
-        description: 'A verified username or QR code means zero typos, zero anxiety, and a seamless payment experience.'
+        title: 'Built for speed',
+        description: 'Paylinc is designed specifically for transport. Scan, pay, and take your seat in seconds.'
     }
 ]
 

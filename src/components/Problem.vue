@@ -17,19 +17,17 @@
                             Problem</span>
                     </div>
                     <h2 class="text-[28px] md:text-[32px] font-bold leading-[1.2] mb-4">
-                        <span class="text-primary dark:text-dark-text">Bank transfers are broken.</span><br />
-                        <span class="text-text-secondary dark:text-dark-muted">Receiving payments shouldn't feel this
-                            stressful.</span>
+                        <span class="text-primary dark:text-dark-text">Transport payments shouldn’t feel this stressful</span>
                     </h2>
                     <p class="text-[16px] text-[#42514D] dark:text-dark-muted leading-[1.6] max-w-150">
-                        Today's payment experience is full of friction. Customers mistype account numbers, merchants
-                        repeat details all day, and every transfer comes with doubt. Payments should be simple, but
-                        instead they feel like a high-stakes typing test.
+                        Today’s transport experience is full of friction. Passengers wait for change, drivers lose
+                        time, and every transfer comes with delays. Moving around should be simple. Instead, it feels
+                        like a daily struggle.
                     </p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" ref="cardsRef">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" ref="cardsRef">
                 <ReusableCard v-for="card in cards" :key="card.title" :title="card.title" :body="card.body"
                     :size="'default'"
                     :title-class-name="'text-[18px] font-semibold text-primary dark:text-dark-text mb-3'"
@@ -47,7 +45,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import { ShieldAlert, Hash, Repeat } from 'lucide-vue-next'
+import { Clock, ShieldAlert, TriangleAlert } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ReusableCard from './ReusableCard.vue'
@@ -59,25 +57,32 @@ const cardsRef = ref(null)
 
 const cards = [
     {
-        title: 'Costly Mistakes',
-        body: 'One wrong digit sends money to the wrong person. Reversing it is slow, stressful, and sometimes impossible.',
-        icon: Hash,
+        title: 'No change delays',
+        body: 'Waiting for the driver or conductor to find exact change wastes time and causes unnecessary arguments.',
+        icon: TriangleAlert,
         iconClass: 'text-alert-red-icon dark:text-red-400',
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-red-bg dark:bg-red-900/30 flex items-center justify-center mb-6'
     },
     {
-        title: 'Constant Repetition',
-        body: 'You keep sharing the same bank details again and again. It\'s tiring, clunky, and still easy for people to get wrong.',
-        icon: Repeat,
+        title: 'Slow boarding',
+        body: 'Fumbling for cash or waiting for bank transfers to confirm slows down everyone. The bus can\'t move until everyone pays.',
         iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
+        icon: ShieldAlert,
         iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
     },
     {
-        title: 'Transfer Doubt',
-        body: "Even after a name check, people still hesitate when they are not fully sure the money is going to the right person or business.",
-        icon: ShieldAlert,
-        iconClass: 'text-alert-yellow-icon dark:text-yellow-400',
-        iconWrapperClass: 'w-10 h-10 rounded-lg bg-alert-yellow-bg dark:bg-yellow-900/30 flex items-center justify-center mb-6'
+        title: 'Payment confusion',
+        body: '"Did the transfer drop?" Repeated back-and-forth during transfers creates tension between drivers and passengers.',
+        icon: Clock,
+        iconClass: 'text-info-blue-icon dark:text-blue-400',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-info-blue-bg dark:bg-blue-900/30 flex items-center justify-center mb-6'
+    },
+    {
+        title: 'Cash dependency',
+        body: 'Relying on physical cash means you can\'t travel if ATMs are down or you don\'t have the exact fare.',
+        icon: TriangleAlert,
+        iconClass: 'text-primary dark:text-dark-text',
+        iconWrapperClass: 'w-10 h-10 rounded-lg bg-light dark:bg-dark-surface flex items-center justify-center mb-6'
     }
 ]
 
