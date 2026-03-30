@@ -1,9 +1,12 @@
 <template>
-  <section class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
+  <section
+    class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300 border-t border-gray-200/60 dark:border-dark-border/40"
+    ref="sectionRef">
     <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
       <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
         <div class="w-full md:w-1/2 relative" ref="imageRef">
-          <div class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0 transition-shadow duration-300">
+          <div
+            class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0 transition-shadow duration-300">
             <img
               :src="kekeRiders"
               alt="Local transport"
@@ -11,25 +14,20 @@
               loading="lazy"
               referrerpolicy="no-referrer"
             >
-            <div class="absolute inset-0 bg-primary/10 dark:bg-dark-base/40 mix-blend-multiply transition-colors duration-300"></div>
-
-            <div class="absolute bottom-6 right-6 bg-white dark:bg-dark-elevated rounded-2xl p-4 shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-1 min-w-35 transition-colors duration-300 border border-transparent dark:border-dark-border">
-              <span class="text-[12px] text-text-secondary dark:text-dark-muted font-medium">Boarding Speed</span>
-              <div class="flex items-center gap-2">
-                <span class="text-[24px] font-bold text-primary dark:text-dark-text">10x</span>
-                <div class="flex items-center gap-1 text-accent dark:text-dark-muted text-[12px] font-medium bg-light dark:bg-dark-surface px-2 py-1 rounded-full transition-colors duration-300">
-                  <TrendingUp :size="12" />
-                  Faster
-                </div>
-              </div>
+            <div
+              class="absolute inset-0 bg-primary/10 dark:bg-dark-base/40 mix-blend-multiply transition-colors duration-300">
             </div>
           </div>
         </div>
 
         <div class="w-full md:w-1/2" ref="textRef">
-          <div class="flex items-center gap-2 mb-6">
-            <div class="w-3 h-3 bg-primary dark:bg-dark-muted rounded-sm"></div>
-            <span class="text-[12px] font-medium text-primary dark:text-dark-muted uppercase tracking-[0.08em]">Trust & Security</span>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-light dark:bg-dark-surface border border-gray-border/50 dark:border-dark-border mb-6">
+            <span class="w-2 h-2 rounded-full bg-accent dark:bg-dark-muted"></span>
+            <span
+              class="text-[12px] font-semibold text-primary dark:text-dark-text uppercase tracking-wider">
+              Reliability
+            </span>
           </div>
 
           <h2 class="text-[28px] md:text-[36px] font-bold text-primary dark:text-dark-text leading-[1.2] mb-8">
@@ -37,29 +35,32 @@
           </h2>
 
           <p class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6] mb-8">
-            Paylinc is designed to make transport payments easier and clearer.<br><br>
-            No confusion.<br>
-            No repeated back-and-forth.<br>
-            No unnecessary stress before movement.<br><br>
-            <strong class="text-primary dark:text-dark-text">Just smoother trips.</strong>
+            Paylinc is designed to work with the realities of daily transport — no matter how busy, crowded, or chaotic it gets.
           </p>
 
           <ul class="space-y-6">
             <li class="flex items-start gap-3">
               <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
-              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong class="text-primary dark:text-dark-text font-bold">No cash needed:</strong> Pay without worrying about change.</span>
+              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-normal">
+                <strong class="text-primary dark:text-dark-text font-semibold">Exact fares, no change required.</strong>
+                Passengers pay the exact amount without the usual change stress.
+              </span>
             </li>
+
             <li class="flex items-start gap-3">
               <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
-              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong class="text-primary dark:text-dark-text font-bold">Less delay:</strong> Keep the line moving.</span>
+              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-normal">
+                <strong class="text-primary dark:text-dark-text font-semibold">Faster confirmation.</strong>
+                Drivers can check payment status more easily, helping movement stay smooth.
+              </span>
             </li>
+
             <li class="flex items-start gap-3">
               <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
-              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong class="text-primary dark:text-dark-text font-bold">Clear payments:</strong> Know what you’re paying for.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
-              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6]"><strong class="text-primary dark:text-dark-text font-bold">Smoother trips:</strong> Less stress for everyone.</span>
+              <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-normal">
+                <strong class="text-primary dark:text-dark-text font-semibold">Clearer records.</strong>
+                Payment details are easier to track, reducing confusion and back-and-forth.
+              </span>
             </li>
           </ul>
         </div>

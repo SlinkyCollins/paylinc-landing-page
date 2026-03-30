@@ -8,7 +8,7 @@
                 </h2>
 
                 <p class="text-[14px] max-[320px]:text-[13px] min-[321px]:text-[15px] sm:text-[16px] text-light/90 dark:text-dark-muted mb-6 max-[320px]:mb-5 sm:mb-8 max-w-full sm:max-w-100">
-                    Get early access, secure your username, and stay updated as we launch.
+                    Get early access and stay updated on our launch by joining the waitlist.
                 </p>
 
                 <form ref="formRef" class="w-full flex flex-col gap-3 max-[320px]:gap-2.5 sm:gap-4 mb-5 sm:mb-6" @submit.prevent="handleSubmit">
@@ -21,8 +21,7 @@
                                 class="w-full min-w-0 h-11 px-3.5 max-[320px]:px-3 rounded-lg bg-accent dark:bg-dark-elevated border border-accent dark:border-dark-border text-white dark:text-dark-text focus:outline-none focus:border-white/30 dark:focus:border-accent transition-colors text-[15px] sm:text-[16px] appearance-none cursor-pointer">
                                 <option disabled value="" class="text-white/60 dark:text-dark-muted">I am a...</option>
                                 <option value="passenger" class="text-white dark:text-dark-text">Passenger</option>
-                                <option value="driver" class="text-white dark:text-dark-text">Driver</option>
-                                <option value="transport_company" class="text-white dark:text-dark-text">Transport Company</option>
+                                <option value="driver_conductor" class="text-white dark:text-dark-text">Driver / Conductor</option>
                             </select>
 
                             <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60 dark:text-dark-muted">

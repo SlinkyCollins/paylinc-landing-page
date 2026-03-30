@@ -4,7 +4,7 @@
       class="max-w-300 mx-auto px-3 sm:px-5 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"
     >
       <!-- Logo / Name -->
-      <a class="flex items-center gap-2.5">
+      <a href="#top" class="flex items-center gap-2.5">
         <img :src="logo" alt="Paylinc Logo" class="w-7 h-7 object-contain" />
         <span class="font-heading font-bold text-[18px] text-primary dark:text-dark-text tracking-tight">Paylinc</span>
       </a>

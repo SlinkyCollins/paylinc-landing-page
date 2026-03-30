@@ -3,7 +3,7 @@
     class="fixed top-0 inset-x-0 z-50 bg-white/95 dark:bg-dark-base/95 backdrop-blur-md h-18 border-b border-gray-border/50 dark:border-dark-border transition-colors duration-300">
     <div class="max-w-300 mx-auto h-full px-3 sm:px-5 md:px-8 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <a href="#" class="flex items-center gap-2">
+        <a href="#top" class="flex items-center gap-2">
           <img :src="logo" alt="Paylinc Logo" class="w-8 h-8" />
           <span class="font-heading font-bold text-[20px] text-primary dark:text-dark-text">Paylinc</span>
         </a>
@@ -21,14 +21,18 @@
           it's For</a>
       </div>
 
-      <div class="flex items-center gap-3 md:gap-4">
+      <div class="flex items-center gap-3 md:gap-4" id="mobile-menu">
         <ThemeToggle />
         <button class="hidden md:flex btn-primary h-10 px-6" @click="scrollToSignup">
           Join Early Access
         </button>
         <button
           class="md:hidden w-10 h-10 flex items-center justify-center text-primary dark:text-dark-text rounded-full hover:bg-gray-100 dark:hover:bg-dark-elevated transition-colors"
-          @click="toggleMobileMenu" aria-label="Toggle menu">
+          @click="toggleMobileMenu" 
+          aria-label="Toggle menu"
+          :aria-expanded="isMobileMenuOpen"
+          aria-controls="mobile-menu"
+          >
           <X v-if="isMobileMenuOpen" :size="24" />
           <Menu v-else :size="24" />
         </button>
@@ -48,16 +52,16 @@
     <div class="flex flex-col p-2">
       <div class="flex flex-col">
         <a href="#problem" @click="closeMobileMenu"
-          class="flex items-center px-6 py-4 text-[18px] font-semibold text-primary dark:text-dark-text hover:bg-gray-50 dark:hover:bg-dark-elevated rounded-xl transition-colors">
+          class="flex items-center px-6 py-4 text-[18px] font-semibold text-primary dark:text-dark-text hover:bg-gray-50 dark:hover:bg-dark-elevated rounded-xl transition-colors scroll-mt-24">
           The Problem
         </a>
         <a href="#process" @click="closeMobileMenu"
-          class="flex items-center px-6 py-4 text-[18px] font-semibold text-primary dark:text-dark-text hover:bg-gray-50 dark:hover:bg-dark-elevated rounded-xl transition-colors">
-          How it Works
+          class="flex items-center px-6 py-4 text-[18px] font-semibold text-primary dark:text-dark-text hover:bg-gray-50 dark:hover:bg-dark-elevated rounded-xl transition-colors scroll-mt-24">
+          How It Works
         </a>
         <a href="#audience" @click="closeMobileMenu"
-          class="flex items-center px-6 py-4 text-[18px] font-semibold text-primary dark:text-dark-text hover:bg-gray-50 dark:hover:bg-dark-elevated rounded-xl transition-colors">
-          Who it's For
+          class="flex items-center px-6 py-4 text-[18px] font-semibold text-primary dark:text-dark-text hover:bg-gray-50 dark:hover:bg-dark-elevated rounded-xl transition-colors scroll-mt-24">
+          Who It's For
         </a>
       </div>
       <div class="p-4 mt-2 border-t border-gray-100 dark:border-dark-border">

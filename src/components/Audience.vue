@@ -1,5 +1,5 @@
 <template>
-  <section id="audience" class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
+  <section id="audience" class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300 border-t border-gray-200/60 dark:border-dark-border/40" ref="sectionRef">
     <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
@@ -30,7 +30,7 @@
           </div>
           <div class="p-6">
             <p class="text-[15px] text-text-secondary dark:text-dark-muted leading-[1.6]">
-              Students and daily commuters who want to board quickly, pay without cash, and avoid arguments over change.
+              Students and daily commuters who want to board faster, pay without cash stress, and avoid arguments over change.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@
           </div>
           <div class="p-6">
             <p class="text-[15px] text-text-secondary dark:text-dark-muted leading-[1.6]">
-              Bus, Keke, and taxi operators who want to collect fares instantly, reduce delays, and keep the transport moving.
+              Bus, keke, and taxi operators who want to collect fares more easily, reduce delays, and keep transport moving.
             </p>
           </div>
         </div>

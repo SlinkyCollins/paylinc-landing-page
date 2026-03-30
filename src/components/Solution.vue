@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-light dark:bg-dark-surface py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
+  <section class="bg-light dark:bg-dark-surface py-16 md:py-24 transition-colors duration-300 border-t border-gray-200/60 dark:border-dark-border/40" ref="sectionRef">
     <div class="max-w-300 mx-auto px-4 sm:px-6 md:px-8">
       <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div class="w-full lg:w-1/2" ref="contentRef">
@@ -13,7 +13,7 @@
           </h2>
 
           <p class="text-[18px] text-text-secondary dark:text-dark-muted leading-[1.6] mb-8 font-medium">
-            Paylinc helps you pay for buses, Keke, and taxis without relying on cash.
+            Paylinc makes it easier to pay for buses, keke, and taxis without depending on cash.
           </p>
 
           <div class="space-y-4 mb-8">
@@ -28,7 +28,7 @@
               <div class="w-8 h-8 rounded-full bg-light dark:bg-dark-base flex items-center justify-center shrink-0">
                 <CheckCircle2 :size="16" class="text-accent dark:text-dark-muted" />
               </div>
-              <span class="text-[16px] font-semibold text-primary dark:text-dark-text">No delays while people pay one by one.</span>
+              <span class="text-[16px] font-semibold text-primary dark:text-dark-text">Less delay while people pay one by one.</span>
             </div>
 
             <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-2xl shadow-sm border border-gray-border/30 dark:border-dark-border">
@@ -40,7 +40,7 @@
           </div>
 
           <p class="text-[20px] font-bold text-primary dark:text-dark-text">
-            Just simple, faster movement.
+            Simple payments. Smoother movement.
           </p>
         </div>
 
