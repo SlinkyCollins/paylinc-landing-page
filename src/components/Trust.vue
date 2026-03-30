@@ -7,13 +7,9 @@
         <div class="w-full md:w-1/2 relative" ref="imageRef">
           <div
             class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0 transition-shadow duration-300">
-            <img
-              :src="kekeRiders"
-              alt="Local transport"
-              class="w-full h-full object-cover dark:opacity-80 transition-opacity duration-300"
-              loading="lazy"
-              referrerpolicy="no-referrer"
-            >
+            <img :src="kekeRiders" alt="Local transport"
+              class="w-full h-full object-cover dark:opacity-80 transition-opacity duration-300" loading="lazy"
+              referrerpolicy="no-referrer">
             <div
               class="absolute inset-0 bg-primary/10 dark:bg-dark-base/40 mix-blend-multiply transition-colors duration-300">
             </div>
@@ -24,8 +20,7 @@
           <div
             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-light dark:bg-dark-surface border border-gray-border/50 dark:border-dark-border mb-6">
             <span class="w-2 h-2 rounded-full bg-accent dark:bg-dark-muted"></span>
-            <span
-              class="text-[12px] font-semibold text-primary dark:text-dark-text uppercase tracking-wider">
+            <span class="text-[12px] font-semibold text-primary dark:text-dark-text uppercase tracking-wider">
               Reliability
             </span>
           </div>
@@ -35,7 +30,8 @@
           </h2>
 
           <p class="text-[16px] text-text-secondary dark:text-dark-muted leading-[1.6] mb-8">
-            Paylinc is designed to work with the realities of daily transport — no matter how busy, crowded, or chaotic it gets.
+            Paylinc is designed to work with the realities of daily transport — no matter how busy, crowded, or chaotic
+            it gets.
           </p>
 
           <ul class="space-y-6">
@@ -50,8 +46,8 @@
             <li class="flex items-start gap-3">
               <CheckCircle2 :size="20" class="text-accent dark:text-dark-muted shrink-0 mt-1" />
               <span class="text-[16px] text-text-secondary dark:text-dark-muted leading-normal">
-                <strong class="text-primary dark:text-dark-text font-semibold">Faster confirmation.</strong>
-                Drivers can check payment status more easily, helping movement stay smooth.
+                <strong class="text-primary dark:text-dark-text font-semibold">Clearer confirmation.</strong>
+                Drivers can check payment details more easily, helping movement stay smooth.
               </span>
             </li>
 
