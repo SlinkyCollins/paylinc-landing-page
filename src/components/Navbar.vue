@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sticky top-0 z-50 bg-white/95 dark:bg-dark-base/95 backdrop-blur-md h-18 border-b border-gray-border/50 dark:border-dark-border transition-colors duration-300">
+    class="fixed top-0 inset-x-0 z-50 bg-white/95 dark:bg-dark-base/95 backdrop-blur-md h-18 border-b border-gray-border/50 dark:border-dark-border transition-colors duration-300">
     <div class="max-w-300 mx-auto h-full px-3 sm:px-5 md:px-8 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <a href="#" class="flex items-center gap-2">
@@ -35,6 +35,8 @@
       </div>
     </div>
   </nav>
+
+  <div class="h-18" aria-hidden="true"></div>
 
   <div
     :class="`md:hidden fixed inset-0 z-40 bg-black/20 dark:bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`"

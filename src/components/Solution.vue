@@ -1,6 +1,6 @@
 <template>
   <section class="bg-light dark:bg-dark-surface py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
-    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-300 mx-auto px-4 sm:px-6 md:px-8">
       <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div class="w-full lg:w-1/2" ref="contentRef">
           <div class="inline-flex items-center gap-2 mb-6 bg-white dark:bg-dark-elevated px-3 py-1.5 rounded-full shadow-sm border border-gray-border/50 dark:border-dark-border">
@@ -17,21 +17,21 @@
           </p>
 
           <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-[16px] shadow-sm border border-gray-border/30 dark:border-dark-border">
+            <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-2xl shadow-sm border border-gray-border/30 dark:border-dark-border">
               <div class="w-8 h-8 rounded-full bg-light dark:bg-dark-base flex items-center justify-center shrink-0">
                 <CheckCircle2 :size="16" class="text-accent dark:text-dark-muted" />
               </div>
               <span class="text-[16px] font-semibold text-primary dark:text-dark-text">No searching for change.</span>
             </div>
 
-            <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-[16px] shadow-sm border border-gray-border/30 dark:border-dark-border">
+            <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-2xl shadow-sm border border-gray-border/30 dark:border-dark-border">
               <div class="w-8 h-8 rounded-full bg-light dark:bg-dark-base flex items-center justify-center shrink-0">
                 <CheckCircle2 :size="16" class="text-accent dark:text-dark-muted" />
               </div>
               <span class="text-[16px] font-semibold text-primary dark:text-dark-text">No delays while people pay one by one.</span>
             </div>
 
-            <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-[16px] shadow-sm border border-gray-border/30 dark:border-dark-border">
+            <div class="flex items-center gap-3 bg-white dark:bg-dark-elevated p-4 rounded-2xl shadow-sm border border-gray-border/30 dark:border-dark-border">
               <div class="w-8 h-8 rounded-full bg-light dark:bg-dark-base flex items-center justify-center shrink-0">
                 <CheckCircle2 :size="16" class="text-accent dark:text-dark-muted" />
               </div>
@@ -45,9 +45,9 @@
         </div>
 
         <div class="w-full lg:w-1/2" ref="imageRef">
-          <div class="relative rounded-[32px] overflow-hidden shadow-[0_20px_60px_rgba(26,60,56,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] aspect-square md:aspect-[4/3] w-full border border-gray-border/50 dark:border-dark-border flex items-center justify-center p-8">
+          <div class="relative rounded-4xl overflow-hidden shadow-[0_20px_60px_rgba(26,60,56,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] aspect-square md:aspect-4/3 w-full border border-gray-border/50 dark:border-dark-border flex items-center justify-center p-8">
             <img
-              src="https://images.unsplash.com/photo-1625191824793-db4300fc138d?w=800&auto=format&fit=crop"
+              :src="smoothTransport"
               alt="Smooth transport"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
@@ -56,7 +56,7 @@
             <div class="absolute inset-0 bg-primary/60 dark:bg-dark-base/80"></div>
 
             <div class="relative z-10 flex flex-col items-center gap-6 w-full max-w-[320px]">
-              <div class="w-full bg-white dark:bg-dark-base rounded-[24px] shadow-xl p-6 border border-gray-border dark:border-dark-border flex flex-col gap-4">
+              <div class="w-full bg-white dark:bg-dark-base rounded-3xl shadow-xl p-6 border border-gray-border dark:border-dark-border flex flex-col gap-4">
                 <div class="flex items-center gap-4 border-b border-gray-border/50 dark:border-dark-border pb-4">
                   <div class="w-12 h-12 rounded-full bg-light dark:bg-dark-surface flex items-center justify-center shrink-0">
                     <Bus :size="24" class="text-primary dark:text-dark-text" />
@@ -92,6 +92,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import smoothTransport from '@/assets/images/smoothTransport.jpg'
 import { ArrowRight, Bus, CheckCircle2 } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

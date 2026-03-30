@@ -1,11 +1,11 @@
 <template>
   <section class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
-    <div class="max-w-[1200px] mx-auto px-3 sm:px-5 md:px-8">
+    <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
       <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
         <div class="w-full md:w-1/2 relative" ref="imageRef">
-          <div class="relative rounded-[32px] overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-[4/3] md:aspect-[3/2] w-full max-w-[500px] mx-auto md:ml-0 transition-shadow duration-300">
+          <div class="relative rounded-4xl overflow-hidden shadow-[0_12px_40px_rgba(26,60,56,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] aspect-4/3 md:aspect-3/2 w-full max-w-125 mx-auto md:ml-0 transition-shadow duration-300">
             <img
-              src="https://i0.wp.com/www.ripplesnigeria.com/wp-content/uploads/2022/01/Kano-keke-riders.jpg?fit=650%2C350&ssl=1"
+              :src="kekeRiders"
               alt="Local transport"
               class="w-full h-full object-cover dark:opacity-80 transition-opacity duration-300"
               loading="lazy"
@@ -13,7 +13,7 @@
             >
             <div class="absolute inset-0 bg-primary/10 dark:bg-dark-base/40 mix-blend-multiply transition-colors duration-300"></div>
 
-            <div class="absolute bottom-6 right-6 bg-white dark:bg-dark-elevated rounded-[16px] p-4 shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-1 min-w-[140px] transition-colors duration-300 border border-transparent dark:border-dark-border">
+            <div class="absolute bottom-6 right-6 bg-white dark:bg-dark-elevated rounded-2xl p-4 shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-1 min-w-35 transition-colors duration-300 border border-transparent dark:border-dark-border">
               <span class="text-[12px] text-text-secondary dark:text-dark-muted font-medium">Boarding Speed</span>
               <div class="flex items-center gap-2">
                 <span class="text-[24px] font-bold text-primary dark:text-dark-text">10x</span>
@@ -71,6 +71,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import { CheckCircle2, TrendingUp } from 'lucide-vue-next'
+import kekeRiders from '@/assets/images/keke-riders.jpg'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

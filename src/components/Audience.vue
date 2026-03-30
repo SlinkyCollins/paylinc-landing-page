@@ -1,6 +1,6 @@
 <template>
   <section id="audience" class="bg-white dark:bg-dark-base py-10 sm:py-16 md:py-24 transition-colors duration-300" ref="sectionRef">
-    <div class="max-w-[1200px] mx-auto px-3 sm:px-5 md:px-8">
+    <div class="max-w-300 mx-auto px-3 sm:px-5 md:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
           <div class="flex items-center gap-2 mb-4">
@@ -16,11 +16,11 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[800px] mx-auto" ref="cardsRef">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-200 mx-auto" ref="cardsRef">
         <div class="bg-light-gray dark:bg-dark-surface rounded-[20px] overflow-hidden shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 flex flex-col border border-transparent dark:border-dark-border">
-          <div class="h-[200px] w-full relative">
-            <img src="https://cdn.guardian.ng/wp-content/uploads/2017/04/keke-marwa.jpg" alt="Passengers" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="h-50 w-full relative">
+            <img :src="passengerImage" alt="Passengers" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
             <div class="absolute bottom-4 left-6 flex items-center gap-3">
               <div class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
                 <User :size="20" class="text-white" />
@@ -36,9 +36,9 @@
         </div>
 
         <div class="bg-light-gray dark:bg-dark-surface rounded-[20px] overflow-hidden shadow-[0_2px_8px_rgba(26,60,56,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(26,60,56,0.08)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 flex flex-col border border-transparent dark:border-dark-border">
-          <div class="h-[200px] w-full relative">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-JC9E5uIaCg8BCKSWGYbAB_GeT0tq-SwcTw&s" alt="Drivers and Conductors" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="h-50 w-full relative">
+            <img :src="driverImage" alt="Drivers and Conductors" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
             <div class="absolute bottom-4 left-6 flex items-center gap-3">
               <div class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
                 <Bus :size="20" class="text-white" />
@@ -59,6 +59,8 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import passengerImage from '@/assets/images/passengers.jpg'
+import driverImage from '@/assets/images/driver.jpg'
 import { Store, Calculator, Briefcase, User, Bus } from 'lucide-vue-next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
