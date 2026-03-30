@@ -50,7 +50,7 @@ Digital payments in informal transit can be slow, risky, and inconsistent. This 
 
 Preview image:
 
-![Paylinc landing preview](public/og-image.png)
+![Paylinc landing preview](public/ogimage.png)
 
 Brand and illustration assets:
 - src/assets/images/avatar.jpg
