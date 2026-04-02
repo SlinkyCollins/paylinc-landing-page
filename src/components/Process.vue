@@ -26,10 +26,10 @@
               1
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white dark:text-light">
-              Open Paylinc
+              Get Started
             </h3>
-            <p class="max-w-sm text-sm leading-6 text-white dark:text-dark-text-secondary">
-              Access a simpler way to handle everyday transport payments.
+            <p class="max-w-sm text-sm leading-6 text-white dark:text-dark-text-secondary text-[16px] dark:text-dark-muted">
+              Download Paylinc and create your unique ID.
             </p>
           </article>
 
@@ -39,10 +39,10 @@
               2
             </div>
             <h3 class="mb-3 text-xl text-white font-semibold dark:text-light">
-              Choose your ride
+              Linc Your Bank
             </h3>
-            <p class="max-w-sm text-sm leading-6 text-white dark:text-dark-text-secondary">
-              Pick the driver or transport you’re paying for with a clear payment flow.
+            <p class="max-w-sm text-sm leading-6 text-white dark:text-dark-text-secondary text-[16px] dark:text-dark-muted">
+              Linc your bank account or card securely.
             </p>
           </article>
 
@@ -52,13 +52,13 @@
               3
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white dark:text-light">
-              Pay and move
+              Scan & Pay
             </h3>
-            <p class="max-w-sm text-sm leading-6 text-white dark:text-dark-text-secondary">
-              Complete payment and continue your trip without unnecessary delay.
+            <p class="max-w-sm text-sm leading-6 text-white dark:text-dark-text-secondary text-[16px] dark:text-dark-muted">
+              Scan the driver's QR or enter their Paylinc ID, confirm, and you're done.
             </p>
           </article>
-        </div>
+        </div>  
       </div>
     </div>
   </section>
